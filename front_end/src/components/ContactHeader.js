@@ -8,7 +8,7 @@ export default function ContactHeader() {
       <div className="contact-detail-container">
         <div className="contact-container">
           <div className="contact-logo-container">
-            <i className="fa-solid fa-phone-volume"></i>
+            <i className="fa-solid fa-phone"></i>
           </div>
           <div className="contact-logo-detail-container">
             <h3>Phone</h3>

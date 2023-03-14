@@ -68,17 +68,133 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #4a4a4a;
+  background-color: #565656;
   color: #ffffff;
   border-radius: 50%;
 }
 
 .contact-logo-detail-container {
   width: 100%;
-  color: #4a4a4a;
+  color: #565656;
 }
 
 .contact-logo-detail-container h3 {
   font-size: 1.3rem;
   font-weight: 500;
+  margin-bottom: 1%;
+}
+
+.navbar {
+  position: absolute;
+  width: 90%;
+  margin: 0% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #313131;
+  border-bottom: 3px solid #f8c12c;
+}
+
+.navbar-items {
+  width: 45%;
+  padding: 2.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.navbar-items li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #ffffff;
+  letter-spacing: 0.05rem;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.navbar-items li span {
+  color: #ffffff;
+  display: block;
+  transition: 0.6s;
+}
+
+.navbar-items li a:hover .navbar-item {
+  transform: translateY(-100%);
+}
+
+.navbar-items li a:before {
+  content: attr(data-link-alt);
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  transition: 1s;
+  color: #f8c12c;
+  font-weight: 600;
+}
+
+.navbar-items li a:hover:before {
+  top: 0;
+  opacity: 1;
+}
+
+.send-query-button {
+  width: 15%;
+  padding: 1% 0%;
+  margin-right: 5%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border: none;
+  background-color: #f8c12c;
+}
+
+.send-query {
+  margin-left: 10%;
+}
+
+.send-query-icon {
+  font-size: 1.5rem;
+  animation: shake-animation 4.7s ease infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes shake-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  1.78571% {
+    transform: translate(5px, 0);
+  }
+  3.57143% {
+    transform: translate(0, 0);
+  }
+  5.35714% {
+    transform: translate(5px, 0);
+  }
+  7.14286% {
+    transform: translate(0, 0);
+  }
+  8.92857% {
+    transform: translate(5px, 0);
+  }
+  10.71429% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.home-image-container {
+  width: 100%;
+  height: 100vh;
+  margin: 3% auto;
+  background-color: #565656;
+  background: url('../assets/home_background.jpg');
+  background-size: cover;
 }
