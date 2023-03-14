@@ -1,0 +1,31 @@
+.page-header {
+  width: 95%;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome-company {
+  width: 30%;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #626262;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.social-media-container {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social-media-container a {
+  font-size: 1.3rem;
+  padding-left: 5%;
+  border-left: 1px solid #dedede;
+  text-decoration: none;
+  color: #626262;
+}
