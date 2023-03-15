@@ -31,7 +31,8 @@
 }
 
 .social-media-container a:hover {
-  color: #393939;
+  transition: all 0.2s;
+  color: #f8c12c;
 }
 
 .contact-header {
@@ -71,6 +72,12 @@
   background-color: #565656;
   color: #ffffff;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.contact-logo-container:hover {
+  transform: scale(1.2);
+  transition: 0.2s linear;
 }
 
 .contact-logo-detail-container {
@@ -158,7 +165,7 @@
 }
 
 .send-query-icon {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   animation: shake-animation 4.7s ease infinite;
   transform-origin: 50% 50%;
 }
@@ -191,10 +198,25 @@
 }
 
 .home-image-container {
+  position: relative;
   width: 100%;
   height: 100vh;
   margin: 3% auto;
-  background-color: #565656;
   background: url('../assets/home_background.jpg');
   background-size: cover;
+  z-index: -1;
+}
+
+.black-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  margin: 0% auto;
+  background-color: #00000086;
+  z-index: 1;
+}
+
+.home-details-container {
+  height: 100%;
+  width: 100%;
 }

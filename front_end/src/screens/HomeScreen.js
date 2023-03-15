@@ -10,7 +10,13 @@ export default function HomeScreen() {
       <PageHeader />
       <ContactHeader />
       <Navbar />
-      <section className="home-image-container"></section>
+      <main className="home-image-container">
+        <div className="black-overlay"></div>
+        <section className="home-details-container">
+          <section className="home-left-section"></section>
+          <section className="home-right-section"></section>
+        </section>
+      </main>
     </section>
   );
 }
