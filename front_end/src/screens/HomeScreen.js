@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar';
 import PageHeader from '../components/PageHeader';
 import About from '../components/About';
 import Home from '../components/Home';
+import Footer from '../components/Footer';
+import ContactFooter from '../components/ContactFooter';
 
 export default function HomeScreen() {
   return (
@@ -14,6 +16,8 @@ export default function HomeScreen() {
       <Navbar />
       <Home />
       <About />
+      <ContactFooter />
+      <Footer />
     </section>
   );
 }
