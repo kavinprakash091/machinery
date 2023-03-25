@@ -7,6 +7,7 @@ import About from '../components/About';
 import Home from '../components/Home';
 import Footer from '../components/Footer';
 import ContactFooter from '../components/ContactFooter';
+import News from '../components/News';
 
 export default function HomeScreen() {
   return (
@@ -16,6 +17,7 @@ export default function HomeScreen() {
       <Navbar />
       <Home />
       <About />
+      <News />
       <ContactFooter />
       <Footer />
     </section>
