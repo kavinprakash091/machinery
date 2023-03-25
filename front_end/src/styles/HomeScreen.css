@@ -461,12 +461,18 @@
 .news-card-image {
   height: 50vh;
   width: 30%;
+  cursor: pointer;
 }
 
 .news-card-image > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.news-card-image > img:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
 }
 
 .news-link-container {

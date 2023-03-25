@@ -4,6 +4,8 @@ import LatestNews from '../components/LatestNews';
 import Navbar from '../components/Navbar';
 import NewsHome from '../components/NewsHome';
 import PageHeader from '../components/PageHeader';
+import ContactFooter from '../components/ContactFooter';
+import Footer from '../components/Footer';
 
 export default function NewsScreen() {
   return (
@@ -13,6 +15,8 @@ export default function NewsScreen() {
       <Navbar />
       <NewsHome />
       <LatestNews />
+      <ContactFooter />
+      <Footer />
     </section>
   );
 }

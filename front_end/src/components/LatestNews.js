@@ -18,7 +18,7 @@ export default function LatestNews() {
       <div className="news-image-container">
         <img src={require('../assets/news_image1.png')} alt="news" />
       </div>
-      <div className="news-details-container">
+      <div className="latest-news-details-container">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. U enim ad
