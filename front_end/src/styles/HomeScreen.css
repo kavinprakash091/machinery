@@ -429,8 +429,49 @@
   color: #c4c4c4;
 }
 
-.team-members-container {
-  margin-top: 20%;
+.contact-project {
+  position: relative;
+  margin: 20% auto 5% auto;
+  height: 40vh;
+  width: 100%;
+  background: url('../assets/contact_background.jpg');
+  z-index: 0;
+}
+
+.black-overlay2 {
+  position: absolute;
+  height: 40vh;
+  width: 100%;
+  background-color: #0000009c;
+  z-index: 1;
+}
+
+.contact-project-detail {
+  position: absolute;
+  margin-top: 7%;
+  margin-left: 3%;
+  font-size: 1.5rem;
+  color: #d7d7d7;
+  z-index: 2;
+}
+
+.contact-project-button {
+  position: absolute;
+  margin-left: 80%;
+  margin-top: 8%;
+  padding: 1% 3%;
+  z-index: 2;
+  font-size: 1.2rem;
+  background-color: #f8c12c;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.contact-project-button:hover {
+  transition: 0.5s;
+  text-decoration: underline;
 }
 
 .employees-container {
