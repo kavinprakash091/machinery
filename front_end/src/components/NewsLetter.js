@@ -19,7 +19,7 @@ export default function NewsLetter() {
           required
         />
         <button className="news-letter-subscribe-button">
-          Subscribe <i className="fa-solid fa-bell fa-shake"></i>
+          SUBSCRIBE <i className="fa-solid fa-bell fa-shake"></i>
         </button>
       </form>
     </section>

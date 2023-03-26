@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import ContactFooter from '../components/ContactFooter';
 import News from '../components/News';
 import NewsLetter from '../components/NewsLetter';
+import Sponsors from '../components/Sponsors';
 
 export default function HomeScreen() {
   return (
@@ -20,6 +21,7 @@ export default function HomeScreen() {
       <About />
       <News />
       <NewsLetter />
+      <Sponsors />
       <ContactFooter />
       <Footer />
     </section>
