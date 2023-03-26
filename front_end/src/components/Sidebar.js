@@ -331,6 +331,11 @@ export default function Sidebar() {
             </li>
           </ul>
         </li>
+        <li>
+          <Link to="/machines" className="machine-view-all-button">
+            <i className="fa-solid fa-plus"></i> View all
+          </Link>
+        </li>
       </ul>
     </nav>
   );
