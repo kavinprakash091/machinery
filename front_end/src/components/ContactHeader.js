@@ -10,7 +10,7 @@ export default function ContactHeader() {
       <div className="contact-detail-container">
         <div className="contact-container">
           <div className="contact-logo-container">
-            <i className="fa-solid fa-phone fa-beat-fade"> </i>{' '}
+            <i className="fa-solid fa-phone"> </i>{' '}
           </div>{' '}
           <div className="contact-logo-detail-container">
             <h3> Phone </h3> + 91 63698 38362{' '}
@@ -18,7 +18,7 @@ export default function ContactHeader() {
         </div>{' '}
         <div className="contact-container">
           <div className="contact-logo-container">
-            <i className="fa-solid fa-house fa-beat-fade"></i>
+            <i className="fa-solid fa-house"></i>
           </div>{' '}
           <div className="contact-logo-detail-container">
             <h3> Address </h3>
@@ -27,7 +27,7 @@ export default function ContactHeader() {
         </div>{' '}
         <div className="contact-container">
           <div className="contact-logo-container">
-            <i className="fa-regular fa-clock fa-beat-fade"></i>
+            <i className="fa-regular fa-clock"></i>
           </div>{' '}
           <div className="contact-logo-detail-container">
             <h3> Office Hours </h3>

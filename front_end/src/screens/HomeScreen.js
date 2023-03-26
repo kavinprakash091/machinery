@@ -12,6 +12,7 @@ import NewsLetter from '../components/NewsLetter';
 import Sponsors from '../components/Sponsors';
 import Team from '../components/Team';
 import ContactProject from '../components/ContactProject';
+import Services from '../components/Services';
 
 export default function HomeScreen() {
   return (
@@ -21,6 +22,7 @@ export default function HomeScreen() {
       <Navbar />
       <Home />
       <About />
+      <Services />
       <ContactProject />
       <Team />
       <News />

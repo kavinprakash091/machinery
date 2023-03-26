@@ -441,9 +441,66 @@
   color: #c4c4c4;
 }
 
+.services {
+  margin: 20% auto 5% auto;
+}
+
+.services-container {
+  width: 90%;
+  margin: 3% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.service-card1,
+.service-card2 {
+  height: 30vh;
+  width: 30%;
+  border-radius: 5px;
+  background: url('../assets/transport_service.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: end;
+  box-shadow: #63636333 0px 2px 8px 0px;
+  cursor: pointer;
+}
+
+.service-card2 {
+  background: url('../assets/tutorial_service.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: end;
+}
+
+.service-card1:hover,
+.service-card2:hover {
+  transition: 0.4s ease-out;
+  box-shadow: #00000012 0px 1px 2px, #00000012 0px 2px 4px,
+    #00000012 0px 4px 8px, #00000012 0px 8px 16px, #00000012 0px 16px 32px,
+    #00000012 0px 32px 64px;
+}
+
+.service-card1 h1,
+.service-card2 h1 {
+  margin: 5%;
+  font-size: 1.5rem;
+  color: #565656;
+}
+
+.service-card1 p,
+.service-card2 p {
+  padding: 1% 5%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #585858;
+  text-align: justify;
+}
+
 .contact-project {
   position: relative;
-  margin: 20% auto 5% auto;
+  margin: 5% auto;
   height: 40vh;
   width: 100%;
   background: url('../assets/contact_background.jpg');
