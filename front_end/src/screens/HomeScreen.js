@@ -8,6 +8,7 @@ import Home from '../components/Home';
 import Footer from '../components/Footer';
 import ContactFooter from '../components/ContactFooter';
 import News from '../components/News';
+import NewsLetter from '../components/NewsLetter';
 
 export default function HomeScreen() {
   return (
@@ -18,6 +19,7 @@ export default function HomeScreen() {
       <Home />
       <About />
       <News />
+      <NewsLetter />
       <ContactFooter />
       <Footer />
     </section>

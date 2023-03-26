@@ -84,7 +84,7 @@ export default function Navbar() {
           <div className="send-query-icon">
             <i className="fa-solid fa-envelope fa-bounce"></i>
           </div>
-          <span className="send-query">Send Query</span>
+          <span className="send-query">Send Email</span>
         </button>
       </div>
     </nav>
