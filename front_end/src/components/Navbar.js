@@ -8,7 +8,7 @@ export default function Navbar() {
     <nav className="navbar">
       <ul className="navbar-items">
         <li onClick={() => setActiveNav(1)}>
-          <Link to="#" data-link-alt="HOME">
+          <Link to="/" data-link-alt="HOME">
             <span
               className={
                 activeNav === 1
@@ -21,7 +21,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li onClick={() => setActiveNav(2)}>
-          <Link to="#" data-link-alt="MACHINES">
+          <Link to="/machines" data-link-alt="MACHINES">
             <span
               className={
                 activeNav === 2
@@ -47,10 +47,23 @@ export default function Navbar() {
           </Link>
         </li>
         <li onClick={() => setActiveNav(4)}>
-          <Link to="#" data-link-alt="CONTACT">
+          <Link to="#" data-link-alt="BLOGS">
             <span
               className={
                 activeNav === 4
+                  ? 'navbar-item active-navbar-item'
+                  : 'navbar-item'
+              }
+            >
+              BLOGS
+            </span>
+          </Link>
+        </li>
+        <li onClick={() => setActiveNav(5)}>
+          <Link to="#" data-link-alt="CONTACT">
+            <span
+              className={
+                activeNav === 5
                   ? 'navbar-item active-navbar-item'
                   : 'navbar-item'
               }
@@ -59,11 +72,11 @@ export default function Navbar() {
             </span>
           </Link>
         </li>
-        <li onClick={() => setActiveNav(5)}>
+        <li onClick={() => setActiveNav(6)}>
           <Link to="#" data-link-alt="ABOUT">
             <span
               className={
-                activeNav === 5
+                activeNav === 6
                   ? 'navbar-item active-navbar-item'
                   : 'navbar-item'
               }
@@ -86,6 +99,12 @@ export default function Navbar() {
           </div>
           <span className="send-query">Send Email</span>
         </button>
+        <Link to="/signin" className="login-button">
+          Login &nbsp;
+          <span>
+            <i className="fa-solid fa-right-to-bracket fa-beat"></i>
+          </span>
+        </Link>
       </div>
     </nav>
   );

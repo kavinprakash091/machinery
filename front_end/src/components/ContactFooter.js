@@ -58,6 +58,7 @@ export default function ContactFooter() {
           <Link to="/">Home</Link>
           <Link to="/">Machines</Link>
           <Link to="/">Services</Link>
+          <Link to="/">Blogs</Link>
           <Link to="/">Contact</Link>
           <Link to="/">About</Link>
         </div>

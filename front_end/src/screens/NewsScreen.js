@@ -13,7 +13,7 @@ export default function NewsScreen() {
       <PageHeader />
       <ContactHeader />
       <Navbar />
-      <NewsHome />
+      <NewsHome content="latest news" />
       <LatestNews />
       <ContactFooter />
       <Footer />
