@@ -39,6 +39,14 @@ export default function Services() {
             Keep visiting our pages.
           </p>
         </div>
+        <div className="service-card1">
+          <h1>Transport service</h1>
+          <p>
+            We are here to provide you a machinery with 100% replacement with
+            Warranty upto on machines. You all keep a trust eye on our product.
+            Keep visiting our pages.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -13,6 +13,7 @@ import Sponsors from '../components/Sponsors';
 import Team from '../components/Team';
 import ContactProject from '../components/ContactProject';
 import Services from '../components/Services';
+import FeaturedProjects from '../components/FeaturedProjects';
 
 export default function HomeScreen() {
   return (
@@ -22,6 +23,7 @@ export default function HomeScreen() {
       <Navbar />
       <Home />
       <About />
+      <FeaturedProjects />
       <Services />
       <ContactProject />
       <Team />
