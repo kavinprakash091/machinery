@@ -306,7 +306,7 @@ export default function LatestNews() {
         </div>
         <button
           onClick={() => setIsShowMore(!isShowMore)}
-          className="news-comment-show-more-button"
+          className="show-more-button"
         >
           {isShowMore ? 'Show less' : 'Show more'}
         </button>

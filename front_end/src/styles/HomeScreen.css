@@ -37,6 +37,7 @@
 }
 
 .contact-header {
+  margin-top: -5%;
   padding: 3%;
   display: flex;
   align-items: center;
@@ -428,8 +429,105 @@
   color: #c4c4c4;
 }
 
+.team-members-container {
+  margin-top: 20%;
+}
+
+.employees-container {
+  height: 70vh;
+  width: 90%;
+  margin: 3% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.big-employees {
+  height: auto;
+}
+
+.employee-card {
+  position: relative;
+  height: 70vh;
+  width: 25%;
+}
+
+.employee-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.employee-image {
+  height: 100%;
+  width: 100%;
+}
+
+.employee-image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.employee-details {
+  height: 10vh;
+  width: 100%;
+  margin-top: -18%;
+  background-color: #585858;
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.employee-details:hover {
+  height: 30vh;
+  margin-top: -60%;
+  transition: 0.5s;
+}
+
+.employee-details h1 {
+  margin: 6% auto;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.employee-details h5 {
+  color: #dedede;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.employee-social-media-container {
+  width: 100%;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.employee-social-media-container a {
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 1.3rem;
+  border: 1px solid #f8c12c;
+  color: #f8c12c;
+  text-decoration: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-social-media-container a:hover {
+  background-color: #f8c12c;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
 .latest-news-container {
-  margin: 20% auto 5% auto;
+  margin: 5% auto;
   width: 90%;
 }
 

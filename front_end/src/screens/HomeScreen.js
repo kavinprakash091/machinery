@@ -10,6 +10,7 @@ import ContactFooter from '../components/ContactFooter';
 import News from '../components/News';
 import NewsLetter from '../components/NewsLetter';
 import Sponsors from '../components/Sponsors';
+import Team from '../components/Team';
 
 export default function HomeScreen() {
   return (
@@ -19,6 +20,7 @@ export default function HomeScreen() {
       <Navbar />
       <Home />
       <About />
+      <Team />
       <News />
       <NewsLetter />
       <Sponsors />
