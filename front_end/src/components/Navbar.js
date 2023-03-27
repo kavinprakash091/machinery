@@ -99,12 +99,6 @@ export default function Navbar() {
           </div>
           <span className="send-query">Send Email</span>
         </button>
-        <Link to="/signin" className="login-button">
-          Login &nbsp;
-          <span>
-            <i className="fa-solid fa-right-to-bracket fa-beat"></i>
-          </span>
-        </Link>
       </div>
     </nav>
   );

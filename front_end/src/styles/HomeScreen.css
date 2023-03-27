@@ -111,7 +111,7 @@
 }
 
 .navbar-items {
-  width: 45%;
+  width: 55%;
   padding: 2.5%;
   display: flex;
   align-items: center;
@@ -159,7 +159,7 @@
 }
 
 .query-button-container {
-  width: 45%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -182,18 +182,6 @@
 
 .send-query {
   margin-left: 10%;
-}
-
-.login-button {
-  width: 50%;
-  text-decoration: none;
-  text-align: center;
-  color: #ffffff;
-  font-size: 1.3rem;
-}
-
-.login-button:hover {
-  color: #f8c12c;
 }
 
 .home-image-container {
