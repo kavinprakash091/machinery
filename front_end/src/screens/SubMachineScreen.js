@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ContactHeader from '../components/ContactHeader';
 import Navbar from '../components/Navbar';
 import NewsHome from '../components/NewsHome';
 import PageHeader from '../components/PageHeader';
+import ProductDetails from '../components/ProductDetails';
 import RelatedImages from '../components/RelatedImages';
 import RelatedVideos from '../components/RelatedVideos';
 import Sidebar from '../components/Sidebar';
@@ -26,11 +26,16 @@ export default function SubMachineScreen() {
             Pasteurization Process and Stainless Steel Dairy Tank from India.{' '}
           </p>{' '}
         </div>{' '}
+        <ProductDetails />
         <RelatedImages
           icon="fa-solid fa-camera fa-shake"
           heading="Related Images"
         />
         <RelatedVideos />
+        <RelatedImages
+          icon="fa-solid fa-map fa-shake"
+          heading="Related Bluprints"
+        />
       </div>
     </section>
   );
