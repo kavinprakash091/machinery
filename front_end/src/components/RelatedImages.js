@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/MachineScreen.css';
 
-export default function RelatedImages() {
+export default function RelatedImages({ heading, icon }) {
   const [imageShowMore, setImageShowMore] = useState(false);
   const [isImageExpand, setImageExpand] = useState(0);
   const [imageDownload, setImageDownload] = useState(0);
@@ -10,7 +10,7 @@ export default function RelatedImages() {
     <section>
       <div className="machine-related-images-container">
         <h2>
-          <i className="fa-solid fa-camera fa-shake"></i> Related Images
+          <i className={icon}></i> {heading}
         </h2>
         <div
           className={
