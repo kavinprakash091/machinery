@@ -21,3 +21,151 @@
 ::-webkit-scrollbar-thumb:hover {
   background: transparent;
 }
+
+.fixed-navbar {
+  width: 100%;
+  background-color: #313131;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: #0000001a 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.fixed-navbar-left-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-brand {
+  margin-left: 10%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.navbar-brand > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.navbar-search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-search-form input {
+  height: 2rem;
+  width: 20rem;
+  border: none;
+  padding-left: 3%;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.navbar-search-form input::placeholder {
+  padding-left: 3%;
+}
+
+.navbar-search-form input:focus {
+  outline: none;
+}
+
+.navbar-search-button {
+  height: 2rem;
+  width: 2rem;
+  background-color: #f8c12c;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+}
+
+.get-best-price-button {
+  height: 2rem;
+  width: 28%;
+  margin-left: 3%;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #f8c12c;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.fixed-navbar-right-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: #f8c12c;
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-count-batch {
+  margin-left: 10%;
+  padding: 5% 15%;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #ff0000;
+  font-size: 0.8rem;
+}
+
+.help-container {
+  position: absolute;
+  display: none;
+  width: 25%;
+  margin-top: 38%;
+  margin-left: 15%;
+  background-color: #f4f4f4;
+  text-align: left;
+  border-radius: 3px;
+  z-index: 5;
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
+}
+
+.help-button:hover .help-container,
+.help-container:hover {
+  display: inline-block;
+}
+
+.help-container h6 {
+  padding: 4%;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #8b8b8b;
+}
+
+.help-container a {
+  display: block;
+  width: 90%;
+  padding: 5%;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #8a8a8a;
+}
+
+.help-container a:hover {
+  background-color: #e2e2e2;
+}
+
+.help-container a span {
+  font-weight: 600;
+  color: #313131;
+}
+
+.help-container a i {
+  margin-right: 3%;
+}
