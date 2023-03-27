@@ -33,7 +33,7 @@ export default function MachineScreen() {
               />
             </div>
             <div className="machine-card-detail-container">
-              <Link to="/machines" className="machine-name">
+              <Link to="/machines/mini-dairy-plant" className="machine-name">
                 Mini Dairy Plant
               </Link>
               <div className="review-container">

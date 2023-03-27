@@ -100,6 +100,127 @@
   text-align: justify;
 }
 
+.machine-detail-container {
+  height: 120vh;
+  width: 90%;
+  margin: 5% auto;
+  box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.machine-detail-left-section {
+  height: 70%;
+  width: 45%;
+}
+
+.machine-detail-left-section > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.machine-detail-left-section > img:hover {
+  transition: 0.5s;
+  transform: scale(1.03);
+}
+
+.machine-detail-right-section {
+  height: 90%;
+  width: 45%;
+  padding: 2%;
+  box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
+}
+
+.machine-name1 {
+  text-decoration: none;
+  color: #313131;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.review-container1 {
+  width: 45%;
+  margin-top: 2%;
+  color: #f8c12c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.available-products1,
+.machine-price1,
+.minimum-order-quantity {
+  margin-top: 2%;
+  color: #7c7c7c;
+}
+
+.minimum-order-quantity span {
+  color: #313131;
+  font-weight: 600;
+}
+
+.machine-information-container {
+  width: 100%;
+  height: 70%;
+  margin-top: 3%;
+  overflow-x: hidden;
+  overflow: scroll;
+}
+
+.machine-detail-table {
+  width: 95%;
+  margin: 0% auto;
+  border-collapse: collapse;
+}
+
+.machine-detail-table td {
+  width: 50%;
+  padding: 2%;
+  border: 1px solid #e4e4e4;
+}
+
+.machine-detail-table tr td:nth-child(1) {
+  color: #7c7c7c;
+}
+
+.machine-information-container p {
+  padding: 3%;
+  color: #7c7c7c;
+  text-align: justify;
+}
+
+.machine-information-container h2 {
+  color: #6d6d6d;
+  font-size: 1.3rem;
+  padding: 3%;
+}
+
+.machine-information-container ul {
+  padding: 0% 8%;
+  color: #7c7c7c;
+}
+
+.add-to-cart-button1 {
+  margin-top: 5%;
+  margin-left: 25%;
+  padding: 2% 10%;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #f8c12c;
+  color: #313131;
+  border: 1px solid #313131;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.add-to-cart-button1:hover {
+  background-color: #ffbb00;
+}
+
 .machine-card-container {
   width: 90%;
   margin: 3% auto;
@@ -207,4 +328,137 @@
 
 .out-of-stock:hover {
   background-color: #c3c3c3;
+}
+
+.machine-related-images-container,
+.machine-related-video-container {
+  width: 95%;
+  margin: 5% auto;
+}
+
+.machine-related-images-container h2,
+.machine-related-video-container h2 {
+  padding: 1%;
+  color: #313131;
+}
+
+.machine-related-images-card-container {
+  height: 40vh;
+  width: 100%;
+  margin: 3% auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.big-related-image-container {
+  height: auto;
+}
+
+.machine-related-images-card {
+  position: relative;
+  width: 30%;
+  height: 40vh;
+}
+
+.big-machine-related-images-card {
+  position: absolute;
+  height: 70%;
+  width: 95%;
+  z-index: 100;
+}
+
+.machine-related-images-card > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.machine-related-images-card-footer {
+  position: absolute;
+  padding: 2% 5%;
+  width: 90%;
+  margin-top: -15%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: end;
+}
+
+.big-machine-related-images-card-footer {
+  position: absolute;
+  padding: 2% 7%;
+  width: 90%;
+  margin-top: -7%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: end;
+}
+
+.big-machine-related-images-card-footer i {
+  margin-left: 3%;
+  cursor: pointer;
+}
+
+.machine-related-images-card-footer i {
+  margin-left: 10%;
+  cursor: pointer;
+}
+
+.machine-related-images-download {
+  position: absolute;
+  margin-top: -22%;
+  margin-left: 55%;
+  height: 2rem;
+  width: 7rem;
+  color: #313131;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  background-color: #ececec;
+}
+
+.big-machine-related-images-download {
+  margin-top: -7%;
+  margin-left: 76%;
+}
+
+.machine-related-images-card > img:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+.big-machine-related-images-card > img:hover {
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+.machine-related-videos-container {
+  height: 50vh;
+  width: 100%;
+  margin: 3% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.big-machine-related-video {
+  height: auto;
+}
+
+.machine-related-video {
+  height: 50vh;
+  width: 80%;
+  object-fit: cover;
 }

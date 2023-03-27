@@ -29,6 +29,7 @@
   align-items: center;
   justify-content: space-around;
   box-shadow: #0000001a 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  z-index: 100;
 }
 
 .fixed-navbar-left-section {

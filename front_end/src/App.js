@@ -3,6 +3,7 @@ import FixedNavbar from './components/FixedNavbar';
 import HomeScreen from './screens/HomeScreen';
 import MachineScreen from './screens/MachineScreen';
 import NewsScreen from './screens/NewsScreen';
+import SubMachineScreen from './screens/SubMachineScreen';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<HomeScreen />} />
         <Route path="/news" element={<NewsScreen />} />
         <Route path="/machines" element={<MachineScreen />} />
+        <Route path="/machines/:machine_name" element={<SubMachineScreen />} />
       </Routes>
     </div>
   );
