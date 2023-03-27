@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ContactHeader from '../components/ContactHeader';
 import Navbar from '../components/Navbar';
 import NewsHome from '../components/NewsHome';
 import PageHeader from '../components/PageHeader';
+import ProductLists from '../components/ProductLists';
 import Sidebar from '../components/Sidebar';
 import '../styles/MachineScreen.css';
 
@@ -24,6 +24,7 @@ export default function MachineScreen() {
             Pasteurization Process and Stainless Steel Dairy Tank from India.
           </p>
         </div>
+        <ProductLists />
       </div>
     </section>
   );
