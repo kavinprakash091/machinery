@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import NewsHome from '../components/NewsHome';
 import PageHeader from '../components/PageHeader';
 import ProductDetails from '../components/ProductDetails';
+import ProductLists from '../components/ProductLists';
 import RelatedImages from '../components/RelatedImages';
 import RelatedVideos from '../components/RelatedVideos';
 import Sidebar from '../components/Sidebar';
@@ -27,6 +28,7 @@ export default function SubMachineScreen() {
           </p>{' '}
         </div>{' '}
         <ProductDetails />
+        <ProductLists />
         <RelatedImages
           icon="fa-solid fa-camera fa-shake"
           heading="Related Images"
