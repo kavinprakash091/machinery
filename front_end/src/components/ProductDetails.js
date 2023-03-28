@@ -1,106 +1,80 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/MachineScreen.css';
+import Ratings from './Ratings';
 
-export default function ProductDetails() {
+export default function ProductDetails({ product_detail }) {
+  const [isLiked, setIsLiked] = useState(false);
   return (
     <section className="machine-detail-container">
       <div className="machine-detail-left-section">
-        <img src={require('../assets/mini_dairy_plant.png')} alt="machine" />
+        <img src={product_detail.image} alt={product_detail.name} />
+        <div className="machine-like-container">
+          <div
+            className={isLiked ? 'machine-like machine-liked' : 'machine-like'}
+          >
+            <i
+              onClick={() => setIsLiked(!isLiked)}
+              className={
+                isLiked
+                  ? 'fa-solid fa-heart fa-beat'
+                  : 'fa-regular fa-heart fa-beat'
+              }
+            ></i>{' '}
+            {product_detail.likes}{' '}
+            {product_detail.likes === 1 ? 'Like' : 'Likes'}
+          </div>
+          <div className="machine-share">
+            <Link to="#">
+              <i className="fa-solid fa-share-nodes"></i> Share
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="machine-detail-right-section">
-        <Link to="/machines/mini-dairy-plant" className="machine-name1">
-          Mini Dairy Plant{' '}
+        <Link
+          to={`/machines/${product_detail.name
+            .toLowerCase()
+            .replace(/ /g, '-')}`}
+          className="machine-name1"
+        >
+          {product_detail.name}
         </Link>{' '}
-        <div className="review-container1">
-          <div className="star-container1">
-            <i className="fa-solid fa-star fa-beat"> </i>{' '}
-            <i className="fa-solid fa-star fa-beat"> </i>{' '}
-            <i className="fa-solid fa-star fa-beat"> </i>{' '}
-            <i className="fa-solid fa-star-half-stroke fa-beat"> </i>{' '}
-            <i className="fa-regular fa-star fa-beat"> </i>{' '}
-          </div>{' '}
-          <p> 7 reviews </p>{' '}
+        <Ratings
+          ratings={product_detail.ratings}
+          numReviews={product_detail.numReviews}
+        />
+        <div className="available-products1">
+          {' '}
+          Available: {product_detail.countInStocks}{' '}
         </div>{' '}
-        <div className="available-products1"> Available: 10 </div>{' '}
-        <div className="machine-price1"> Rs 20, 00, 000 / - </div>{' '}
+        <div className="machine-price1"> Rs {product_detail.price} / - </div>{' '}
         <div className="minimum-order-quantity">
           Minimum order quantity : <span>1 Piece</span>
         </div>
         <div className="machine-information-container">
           <table className="machine-detail-table">
-            <tr>
-              <td>Usage/Application</td>
-              <td>Milk</td>
-            </tr>
-            <tr>
-              <td>Packaging Type</td>
-              <td>Wood</td>
-            </tr>
-            <tr>
-              <td>Capacity</td>
-              <td>20 - 100 Kgs</td>
-            </tr>
-            <tr>
-              <td>Equipment Type</td>
-              <td>Mini Dairy Plant</td>
-            </tr>
-            <tr>
-              <td>Material</td>
-              <td>Stainless Steel</td>
-            </tr>
-            <tr>
-              <td>Machine Body Material</td>
-              <td>Stainless Steel</td>
-            </tr>
-            <tr>
-              <td>Brand</td>
-              <td>Company Name</td>
-            </tr>
-            <tr>
-              <td>Design Type</td>
-              <td>Customized</td>
-            </tr>
-            <tr>
-              <td>Automatic Grade</td>
-              <td>Semi-Automatic</td>
-            </tr>
-            <tr>
-              <td>Automation Grade</td>
-              <td>Semi-Automatic</td>
-            </tr>
-            <tr>
-              <td>Height</td>
-              <td>Default</td>
-            </tr>
-            <tr>
-              <td>Operated By</td>
-              <td>Automatic</td>
-            </tr>
-            <tr>
-              <td>Orientation</td>
-              <td>Horizontal</td>
-            </tr>
-            <tr>
-              <td>Type</td>
-              <td>Air Pneumatic</td>
-            </tr>
-            <tr>
-              <td>Voltage</td>
-              <td>220</td>
-            </tr>
+            {product_detail.details[0].map((x, index) => (
+              <tr key={index}>
+                <td>{x}</td>
+                <td>{product_detail.details[1][index]}</td>
+              </tr>
+            ))}
           </table>
-          <p>
-            In order to keep pace with the never-ending demands of customers, we
-            are involved in offering a wide range of Paneer Press Machine.
-          </p>
-          <h2>Additional Information</h2>
-          <ul>
-            <li>Item Code: 002</li>
-            <li>Production Capacity: 20 - 100 Kgs</li>
-            <li>Delivery Time: 1'Week</li>
-            <li>Packaging Details: wood</li>
-          </ul>
+          {product_detail.description !== '' && (
+            <p>{product_detail.description}</p>
+          )}
+
+          {product_detail.additional_information.length !== 0 && (
+            <div>
+              <h2>Additional Information</h2>
+              <ul>
+                {product_detail.additional_information.map((info, index) => (
+                  <li key={index}>{info}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
         <button className="add-to-cart-button1">
           ADD TO CART <i className="fa-solid fa-cart-shopping fa-shake"> </i>{' '}

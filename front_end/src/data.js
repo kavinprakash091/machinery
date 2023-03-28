@@ -67,8 +67,9 @@ const data = {
         description:
           'Banking on the skills of our qualified team of professionals, we are instrumental in offering a supreme quality range of Mini Dairy Plant.',
         additional_information: [],
+        likes: 19,
       },
-      ,
+
       {
         name: 'Paneer Press Machine',
         category: 'Dairy Equipments',
@@ -121,6 +122,7 @@ const data = {
           "Delivery Time: 1'Week",
           'Packaging Details: wood',
         ],
+        likes: 4,
       },
       {
         name: 'Curd Production From Milk',
@@ -128,8 +130,8 @@ const data = {
         image: '../products/a3.png',
         price: 300000,
         countInStocks: 15,
-        ratings: 4,
-        numReviews: 23,
+        ratings: 3.5,
+        numReviews: 27,
         details: [
           [
             'Capacity',
@@ -146,6 +148,7 @@ const data = {
         ],
         description: '',
         additional_information: [],
+        likes: 11,
       },
       {
         name: 'Paneer Making Machine',
@@ -161,6 +164,7 @@ const data = {
         ],
         description: '',
         additional_information: [],
+        likes: 22,
       },
       {
         name: 'Milk Pasteurization Process',
@@ -168,14 +172,15 @@ const data = {
         image: '../products/a5.png',
         price: 2000000,
         countInStocks: 15,
-        ratings: 4,
-        numReviews: 23,
+        ratings: 1.5,
+        numReviews: 1,
         details: [
           ['Design Type', 'Automation Grade', 'Country of Origin	'],
           ['Customized, Standard', 'Semi-Automatic', 'Made in India'],
         ],
         description: '',
         additional_information: [],
+        likes: 8,
       },
       {
         name: 'Stainless Steel Dairy Tank',
@@ -183,7 +188,7 @@ const data = {
         image: '../products/a6.png',
         price: 40000,
         countInStocks: 15,
-        ratings: 4,
+        ratings: 2.5,
         numReviews: 17,
         details: [
           [
@@ -215,6 +220,7 @@ const data = {
           "Delivery Time: 1'Week",
           'Packaging Details: Wood',
         ],
+        likes: 16,
       },
       {
         name: 'Curd Processing Unit',
@@ -222,14 +228,15 @@ const data = {
         image: '../products/a7.png',
         price: 2000000,
         countInStocks: 15,
-        ratings: 4,
+        ratings: 3,
         numReviews: 3,
         details: [
-          ['Design Type","Automation Grade","Country of Origin'],
+          ['Design Type', 'Automation Grade', 'Country of Origin'],
           ['Standard', 'Semi-Automatic', 'Made in India'],
         ],
         description: '',
         additional_information: [],
+        likes: 10,
       },
     ],
   ],

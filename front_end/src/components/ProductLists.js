@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/HomeScreen.css';
 import data from '../data';
+import Ratings from './Ratings';
 
 export default function ProductLists() {
   return (
@@ -19,16 +20,10 @@ export default function ProductLists() {
             >
               {product.name}
             </Link>{' '}
-            <div className="review-container">
-              <div className="star-container">
-                <i className="fa-solid fa-star fa-beat"> </i>{' '}
-                <i className="fa-solid fa-star fa-beat"> </i>{' '}
-                <i className="fa-solid fa-star fa-beat"> </i>{' '}
-                <i className="fa-solid fa-star-half-stroke fa-beat"> </i>{' '}
-                <i className="fa-regular fa-star fa-beat"> </i>
-              </div>
-              <p> {product.numReviews} reviews </p>
-            </div>
+            <Ratings
+              ratings={product.ratings}
+              numReviews={product.numReviews}
+            />
             <div className="available-products">
               Available: {product.countInStocks}
             </div>

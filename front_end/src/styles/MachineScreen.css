@@ -118,7 +118,7 @@
 }
 
 .machine-detail-left-section {
-  height: 70%;
+  height: 50%;
   width: 45%;
 }
 
@@ -131,6 +131,29 @@
 .machine-detail-left-section > img:hover {
   transition: 0.5s;
   transform: scale(1.03);
+}
+
+.machine-like-container {
+  width: 90%;
+  margin: 23% auto;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.machine-like {
+  color: #7c7c7c;
+}
+
+.machine-liked i {
+  color: #ff2828;
+}
+
+.machine-share a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #24a887;
 }
 
 .machine-detail-right-section {
@@ -210,7 +233,7 @@
 }
 
 .add-to-cart-button1 {
-  margin-top: 5%;
+  margin-top: 1%;
   margin-left: 25%;
   padding: 2% 10%;
   font-size: 1rem;
