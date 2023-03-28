@@ -462,3 +462,139 @@
   width: 80%;
   object-fit: cover;
 }
+
+.machine-comment-container {
+  height: 50vh;
+  width: 90%;
+  margin: 5% auto;
+}
+
+.machine-comment-header {
+  width: 90%;
+  padding: 1% 5%;
+  color: #313131;
+  font-weight: 500;
+  background-color: #eeeeee;
+}
+
+.machine-comment-form-container {
+  width: 90%;
+  margin: 3% auto;
+}
+
+.machine-comment-form-container h1 {
+  color: #666666;
+}
+
+.machine-comment-form input,
+.machine-comment-form textarea {
+  height: 3rem;
+  width: 100%;
+  padding-left: 2%;
+  margin: 1% auto;
+  border: 1px solid #eeeeee;
+}
+
+.machine-comment-form textarea {
+  padding-top: 2%;
+  height: auto;
+}
+
+.machine-comment-form input::placeholder,
+.machine-comment-form textarea::placeholder {
+  font-size: 1rem;
+}
+
+.machine-comment-form input:focus,
+.machine-comment-form textarea:focus {
+  outline: none;
+  border: 1px solid #666666;
+}
+
+.machine-post-comment-button {
+  padding: 1% 2%;
+  border: none;
+  background-color: #f8c12c;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.machine-recent-comment-container {
+  width: 90%;
+  margin: 5% auto 0% auto;
+}
+
+.machine-recent-comment-container h1 {
+  color: #666666;
+  border-bottom: 1px solid #989898;
+}
+
+.machine-recent-comment-details-container {
+  height: 50vh;
+  width: 90%;
+  margin: 3% auto;
+  overflow: hidden;
+}
+
+.big-machine-comment {
+  height: auto;
+}
+
+.machine-recent-comment-details {
+  margin-top: 2%;
+  border-bottom: 1px solid #989898;
+}
+
+.machine-recent-comment-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.machine-recent-comment-details-image {
+  height: 3rem;
+  width: 3rem;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.machine-recent-comment-details-image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.machine-recent-comment-name-details {
+  color: #989898;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.machine-recent-comment-name-details h1 {
+  color: #666666;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: none;
+}
+
+.machine-recent-comment-details-content {
+  width: 90%;
+  margin: 2% 0% 2% 7%;
+  color: #666666;
+  text-align: justify;
+}
+
+.machine-comment-like-container {
+  width: 100%;
+  color: #7c7c7c;
+  padding: 0% 3%;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.machine-comment-like-container i {
+  cursor: pointer;
+}

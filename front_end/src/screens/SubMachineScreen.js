@@ -1,4 +1,5 @@
 import React from 'react';
+import Comment from '../components/Comment';
 import ContactHeader from '../components/ContactHeader';
 import Navbar from '../components/Navbar';
 import NewsHome from '../components/NewsHome';
@@ -38,6 +39,7 @@ export default function SubMachineScreen() {
           icon="fa-solid fa-map fa-shake"
           heading="Related Bluprints"
         />
+        <Comment />
       </div>
     </section>
   );
