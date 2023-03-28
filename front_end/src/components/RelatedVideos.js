@@ -17,22 +17,13 @@ export default function RelatedVideos() {
           }
         >
           <video className="machine-related-video" controls>
-            <source
-              src={require('../assets/machine_video.mp4')}
-              type="video/mp4"
-            ></source>
+            <source src="/products/machine_video.mp4" type="video/mp4"></source>
           </video>
           <video className="machine-related-video" controls>
-            <source
-              src={require('../assets/machine_video.mp4')}
-              type="video/mp4"
-            ></source>
+            <source src="/products/machine_video.mp4" type="video/mp4"></source>
           </video>
           <video className="machine-related-video" controls>
-            <source
-              src={require('../assets/machine_video.mp4')}
-              type="video/mp4"
-            ></source>
+            <source src="/products/machine_video.mp4" type="video/mp4"></source>
           </video>
         </div>
       </div>
