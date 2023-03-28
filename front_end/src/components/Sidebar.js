@@ -5,17 +5,13 @@ import data from '../data';
 
 export default function Sidebar() {
   const [activeNav, setActiveNav] = useState(0);
-  data.products.map((x, idx) => {
-    console.log(x);
-    data.sub_products[idx].map((y) => console.log(y));
-  });
   return (
     <section>
       <nav className="sidebar">
         <div className="sidebar-header"> Our Product </div>{' '}
         <ul className="product-lists">
           {data.products.map((product, index) => (
-            <li>
+            <li key={index}>
               <div
                 className="product-list-items"
                 onClick={() =>
@@ -57,7 +53,7 @@ export default function Sidebar() {
                 }
               >
                 {data.sub_products[index].map((sub_product) => (
-                  <li>
+                  <li key={sub_product}>
                     <i className="fa-solid fa-angle-right"> </i>{' '}
                     <Link
                       to={`/machines/${sub_product

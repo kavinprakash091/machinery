@@ -43,7 +43,7 @@ const data = {
       {
         name: 'Mini Dairy Plant',
         category: 'Dairy Equipments',
-        image: '../products/a1.png',
+        image: '/products/a1.png',
         price: 500000,
         countInStocks: 10,
         ratings: 4.5,
@@ -68,6 +68,7 @@ const data = {
           'Banking on the skills of our qualified team of professionals, we are instrumental in offering a supreme quality range of Mini Dairy Plant.',
         additional_information: [],
       },
+      ,
       {
         name: 'Paneer Press Machine',
         category: 'Dairy Equipments',
@@ -183,7 +184,7 @@ const data = {
         price: 40000,
         countInStocks: 15,
         ratings: 4,
-        numReviews: 23,
+        numReviews: 17,
         details: [
           [
             'Usage/Application',
@@ -222,7 +223,7 @@ const data = {
         price: 2000000,
         countInStocks: 15,
         ratings: 4,
-        numReviews: 23,
+        numReviews: 3,
         details: [
           ['Design Type","Automation Grade","Country of Origin'],
           ['Standard', 'Semi-Automatic', 'Made in India'],
