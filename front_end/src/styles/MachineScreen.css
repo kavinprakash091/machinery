@@ -624,5 +624,10 @@
 }
 
 .machine-comment-like-container i {
+  font-size: 1rem;
   cursor: pointer;
+}
+
+.machine-comment-liked {
+  color: #3364ae;
 }

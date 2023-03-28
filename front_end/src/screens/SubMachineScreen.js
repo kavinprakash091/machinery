@@ -42,13 +42,15 @@ export default function SubMachineScreen() {
         <RelatedImages
           icon="fa-solid fa-camera fa-shake"
           heading="Related Images"
+          relatedImages={product_details.related_image}
         />
-        <RelatedVideos />
+        <RelatedVideos relatedVideos={product_details.related_video} />
         <RelatedImages
           icon="fa-solid fa-map fa-shake"
           heading="Related Bluprints"
+          relatedImages={product_details.related_blueprint}
         />
-        <Comment />
+        <Comment comments={product_details.comments} />
       </div>
     </section>
   );

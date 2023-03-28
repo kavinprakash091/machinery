@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/MachineScreen.css';
 
-export default function Comment() {
+export default function Comment({ comments }) {
   const [isShowMore, setIsShowMore] = useState(false);
+  const [isLiked, setIsLiked] = useState([0]);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [comment, setComment] = useState('');
@@ -53,136 +54,42 @@ export default function Comment() {
               : 'machine-recent-comment-details-container'
           }
         >
-          <div className="machine-recent-comment-details">
-            <div className="machine-recent-comment-details-header">
-              <div className="machine-recent-comment-details-image"></div>
-              <div className="machine-recent-comment-name-details">
-                <h1>Kavin Prakash</h1>
-                <span>
-                  <i className="fa-solid fa-calendar-days"></i> 11.03.2002 |{' '}
-                  <i className="fa-solid fa-clock"></i> 8.45 am
-                </span>
+          {comments.map((comment, index) => (
+            <div className="machine-recent-comment-details" key={index}>
+              <div className="machine-recent-comment-details-header">
+                <div className="machine-recent-comment-details-image"></div>
+                <div className="machine-recent-comment-name-details">
+                  <h1>{comment.name}</h1>
+                  <span>
+                    <i className="fa-solid fa-calendar-days"></i> {comment.date}{' '}
+                    | <i className="fa-solid fa-clock"></i> {comment.time}
+                  </span>
+                </div>
+              </div>
+              <div className="machine-recent-comment-details-content">
+                <p>{comment.text}</p>
+              </div>
+              <div className="machine-comment-like-container">
+                <i
+                  onClick={() => {
+                    if (isLiked.includes(index + 1)) {
+                      isLiked.pop(index + 1);
+                      setIsLiked(isLiked);
+                    } else {
+                      isLiked.push(index + 1);
+                      setIsLiked(isLiked);
+                    }
+                  }}
+                  className={
+                    isLiked.includes(index + 1)
+                      ? 'fa-solid fa-thumbs-up fa-bounce machine-comment-liked'
+                      : 'fa-solid fa-thumbs-up fa-bounce'
+                  }
+                ></i>
+                {comment.likes} {comment.likes === 1 ? 'Like' : 'Likes'}
               </div>
             </div>
-            <div className="machine-recent-comment-details-content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. U
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dol in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                s in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div className="machine-comment-like-container">
-              <i class="fa-solid fa-thumbs-up fa-bounce"></i> 10 Likes
-            </div>
-          </div>
-          <div className="machine-recent-comment-details">
-            <div className="machine-recent-comment-details-header">
-              <div className="machine-recent-comment-details-image"></div>
-              <div className="machine-recent-comment-name-details">
-                <h1>Kavin Prakash</h1>
-                <span>
-                  <i className="fa-solid fa-calendar-days"></i> 11.03.2002 |{' '}
-                  <i className="fa-solid fa-clock"></i> 8.45 am
-                </span>
-              </div>
-            </div>
-            <div className="machine-recent-comment-details-content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. U
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dol in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                s in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div className="machine-comment-like-container">
-              <i class="fa-solid fa-thumbs-up fa-bounce"></i> 10 Likes
-            </div>
-          </div>
-          <div className="machine-recent-comment-details">
-            <div className="machine-recent-comment-details-header">
-              <div className="machine-recent-comment-details-image"></div>
-              <div className="machine-recent-comment-name-details">
-                <h1>Kavin Prakash</h1>
-                <span>
-                  <i className="fa-solid fa-calendar-days"></i> 11.03.2002 |{' '}
-                  <i className="fa-solid fa-clock"></i> 8.45 am
-                </span>
-              </div>
-            </div>
-            <div className="machine-recent-comment-details-content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. U
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dol in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                s in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div className="machine-comment-like-container">
-              <i class="fa-solid fa-thumbs-up fa-bounce"></i> 10 Likes
-            </div>
-          </div>
-          <div className="machine-recent-comment-details">
-            <div className="machine-recent-comment-details-header">
-              <div className="machine-recent-comment-details-image"></div>
-              <div className="machine-recent-comment-name-details">
-                <h1>Kavin Prakash</h1>
-                <span>
-                  <i className="fa-solid fa-calendar-days"></i> 11.03.2002 |{' '}
-                  <i className="fa-solid fa-clock"></i> 8.45 am
-                </span>
-              </div>
-            </div>
-            <div className="machine-recent-comment-details-content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. U
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dol in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                s in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div className="machine-comment-like-container">
-              <i class="fa-solid fa-thumbs-up fa-bounce"></i> 10 Likes
-            </div>
-          </div>
-          <div className="machine-recent-comment-details">
-            <div className="machine-recent-comment-details-header">
-              <div className="machine-recent-comment-details-image"></div>
-              <div className="machine-recent-comment-name-details">
-                <h1>Kavin Prakash</h1>
-                <span>
-                  <i className="fa-solid fa-calendar-days"></i> 11.03.2002 |{' '}
-                  <i className="fa-solid fa-clock"></i> 8.45 am
-                </span>
-              </div>
-            </div>
-            <div className="machine-recent-comment-details-content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. U
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dol in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                s in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div className="machine-comment-like-container">
-              <i class="fa-solid fa-thumbs-up fa-bounce"></i> 10 Likes
-            </div>
-          </div>
+          ))}
         </div>
         <button
           onClick={() => setIsShowMore(!isShowMore)}

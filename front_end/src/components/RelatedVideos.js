@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/MachineScreen.css';
 
-export default function RelatedVideos() {
+export default function RelatedVideos({ relatedVideos }) {
   const [videoShowMore, setVideoShowMore] = useState(false);
   return (
     <section>
@@ -16,15 +16,11 @@ export default function RelatedVideos() {
               : 'machine-related-videos-container'
           }
         >
-          <video className="machine-related-video" controls>
-            <source src="/products/machine_video.mp4" type="video/mp4"></source>
-          </video>
-          <video className="machine-related-video" controls>
-            <source src="/products/machine_video.mp4" type="video/mp4"></source>
-          </video>
-          <video className="machine-related-video" controls>
-            <source src="/products/machine_video.mp4" type="video/mp4"></source>
-          </video>
+          {relatedVideos.map((video, index) => (
+            <video className="machine-related-video" controls key={index}>
+              <source src={video} type="video/mp4"></source>
+            </video>
+          ))}
         </div>
       </div>
       <button
