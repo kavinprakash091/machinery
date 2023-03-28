@@ -57,7 +57,12 @@ export default function Comment({ comments }) {
           {comments.map((comment, index) => (
             <div className="machine-recent-comment-details" key={index}>
               <div className="machine-recent-comment-details-header">
-                <div className="machine-recent-comment-details-image"></div>
+                <div className="machine-recent-comment-details-image">
+                  <img
+                    src={require('../assets/user_avatar_logo.png')}
+                    alt="user"
+                  />
+                </div>
                 <div className="machine-recent-comment-name-details">
                   <h1>{comment.name}</h1>
                   <span>
@@ -86,6 +91,7 @@ export default function Comment({ comments }) {
                       : 'fa-solid fa-thumbs-up fa-bounce'
                   }
                 ></i>
+                {'  '}
                 {comment.likes} {comment.likes === 1 ? 'Like' : 'Likes'}
               </div>
             </div>
