@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/HomeScreen.css';
-import data from '../data';
 import Ratings from './Ratings';
 
-export default function ProductLists() {
+export default function ProductLists({ machines }) {
   return (
     <section className="machine-card-container">
-      {' '}
-      {data.product_details[0].map((product) => (
+      {machines.map((product) => (
         <div className="machine-card" key={product.name}>
           <div className="machine-image-container">
             <img src={product.image} alt={product.name} />{' '}

@@ -22,7 +22,7 @@ export default function Sidebar() {
               >
                 <div>
                   <Link
-                    to={`/machines/${product.toLowerCase().replace(/ /g, '-')}`}
+                    to={`/machine/${product.toLowerCase().replace(/ /g, '-')}`}
                   >
                     {' '}
                     {product}{' '}

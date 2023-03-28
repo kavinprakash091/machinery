@@ -16,16 +16,15 @@ import '../styles/MachineScreen.css';
 export default function SubMachineScreen() {
   const { machine_name } = useParams();
   const product_name = machine_name.replace(/-/g, ' ');
-  console.log(product_name);
-  var product_details;
+  var product_details, product_detail;
   data.sub_products.map((product, x) => {
     product.map((sub_product, y) => {
-      sub_product.toLowerCase() === product_name &&
-        (product_details = data.product_details[x][y]);
+      if (sub_product.toLowerCase() === product_name) {
+        product_details = data.product_details[x][y];
+        product_detail = data.product_details[x];
+      }
     });
   });
-
-  console.log(product_details);
 
   return (
     <section className="machine-page">
@@ -36,15 +35,10 @@ export default function SubMachineScreen() {
       <Sidebar />
       <div className="machines-container">
         <div className="machine-header-container">
-          <h1>Mini Dairy Plant </h1>{' '}
-          <p>
-            Pioneers in the industry, we offer Mini Dairy Plant, Paneer Press
-            Machine, Curd Production From Milk, Paneer Making Machine, Milk
-            Pasteurization Process and Stainless Steel Dairy Tank from India.{' '}
-          </p>{' '}
+          <h1>{product_details.name} </h1> <p>{product_details.description}</p>{' '}
         </div>{' '}
         <ProductDetails product_detail={product_details} />
-        <ProductLists />
+        <ProductLists machines={product_detail} />
         <RelatedImages
           icon="fa-solid fa-camera fa-shake"
           heading="Related Images"

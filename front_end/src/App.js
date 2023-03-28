@@ -14,6 +14,7 @@ function App() {
         <Route path="/news" element={<NewsScreen />} />
         <Route path="/machines" element={<MachineScreen />} />
         <Route path="/machines/:machine_name" element={<SubMachineScreen />} />
+        <Route path="/machine/:machine_name" element={<MachineScreen />} />
       </Routes>
     </div>
   );

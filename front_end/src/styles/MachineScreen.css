@@ -254,14 +254,14 @@
   margin: 3% auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
 .machine-card {
   width: 30%;
-  height: 70vh;
+  height: 75vh;
   padding-top: 1.5%;
   box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
   border-radius: 5px;
