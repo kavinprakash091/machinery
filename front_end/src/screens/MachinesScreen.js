@@ -47,10 +47,6 @@ export default function MachinesScreen() {
     fetchMachines();
   }, []);
 
-  machine_list &&
-    machine_list.map((product, index) =>
-      console.log(product.name + ' ' + product.description)
-    );
   return (
     <section className="machine-page">
       {loading && <Loading />}
