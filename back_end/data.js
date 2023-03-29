@@ -1017,7 +1017,7 @@ const data = {
     },
     {
       name: 'Milk Pasteurization Units',
-      sub_product: [
+      product_details: [
         {
           name: 'Milk Pasteurization Unit',
           category: 'Milk Pasteurization Units',
@@ -1245,7 +1245,7 @@ const data = {
     },
     {
       name: 'Milk And Dairy Plant',
-      sub_product: [
+      product_details: [
         {
           name: 'Curd Incubation Process',
           category: 'Milk And Dairy Plant',
@@ -1333,7 +1333,7 @@ const data = {
     },
     {
       name: 'Dairy Products Making Machine',
-      sub_product: [
+      product_details: [
         {
           name: 'Ghee Vat Making Machine',
           category: 'Dairy Products Making Machine',
@@ -1397,7 +1397,7 @@ const data = {
     },
     {
       name: 'Chilling Plant',
-      sub_product: [
+      product_details: [
         {
           name: 'Instant Milk Chilling Plant',
           category: 'Chilling Plant',
@@ -1446,7 +1446,6 @@ const data = {
         'Offering you a complete choice of products which include Instant Milk Chilling Plant.',
     },
   ],
-  product_details: [],
 };
 
 export default data;

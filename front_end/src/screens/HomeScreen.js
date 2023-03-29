@@ -14,10 +14,14 @@ import Team from '../components/Team';
 import ContactProject from '../components/ContactProject';
 import Services from '../components/Services';
 import FeaturedProjects from '../components/FeaturedProjects';
+import { Helmet } from 'react-helmet-async';
 
 export default function HomeScreen() {
   return (
     <section className="home-page">
+      <Helmet>
+        <title> Company Name </title>
+      </Helmet>
       <PageHeader />
       <ContactHeader />
       <Navbar />

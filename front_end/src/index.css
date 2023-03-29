@@ -170,3 +170,15 @@
 .help-container a i {
   margin-right: 3%;
 }
+
+.loading-container {
+  position: fixed;
+  margin-top: 1.5%;
+  height: 100%;
+  width: 100%;
+  background-color: #0000007a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}

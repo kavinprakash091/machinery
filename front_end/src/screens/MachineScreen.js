@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import ContactHeader from '../components/ContactHeader';
 import Navbar from '../components/Navbar';
@@ -22,6 +23,9 @@ export default function MachineScreen() {
 
   return (
     <section className="machine-page">
+      <Helmet>
+        <title>Machines</title>
+      </Helmet>
       <PageHeader />
       <ContactHeader />
       <Navbar />
