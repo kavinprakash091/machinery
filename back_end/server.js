@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import path from 'path';
 import core from 'cors';
+import seedRouter from './routes/SeedRouter.js';
 
 dotenv.config();
 
@@ -25,13 +26,9 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
+app.use('/', seedRouter);
+
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`serve at http://localhost:${port}`);
-});
-
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, '../front_end/build')));
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../front_end/build/index.html'));
 });
