@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { Store } from '../Store';
 
 export default function FixedNavbar() {
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { userDetails } = state;
   const [search, setSearch] = useState('');
+  const [activeProfile, setActiveProfile] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
     alert(search);
+  };
+  const signoutHandler = () => {
+    localStorage.removeItem('userDetails');
+    ctxDispatch({ type: 'SIGN_OUT' });
+    toast.success(userDetails.username + ' signed out successfully!');
   };
   return (
     <nav className="fixed-navbar">
@@ -81,10 +91,58 @@ export default function FixedNavbar() {
           <i className="fa-solid fa-message"></i>
           <span>Messages</span>
         </Link>
-        <Link to="/sign-in" className="login-button">
-          <i className="fa-solid fa-right-to-bracket"></i>
-          <span>Sign in</span>
-        </Link>
+        {userDetails ? (
+          <Link
+            to="#"
+            onClick={() => setActiveProfile(!activeProfile)}
+            className="login-button"
+          >
+            <i className="fa-solid fa-user"></i>
+            <span>{userDetails.username}</span>
+            <div
+              className={
+                activeProfile
+                  ? 'profile-list-container active-profile-list-container'
+                  : 'profile-list-container'
+              }
+            >
+              <div className="profile-image-container">
+                <img
+                  src={require('../assets/user_avatar_logo.png')}
+                  alt={userDetails.username}
+                />
+              </div>
+              <div className="profile-name-container">
+                <Link to="/users/profile">{userDetails.username}</Link>
+              </div>
+              <Link to="/users/profile">
+                <i className="fa-solid fa-user"></i>
+                User Profile
+              </Link>
+              <Link to="/order-history">
+                <i className="fa-solid fa-tag"></i>
+                My Orders
+              </Link>
+              <Link to="/recent-activity">
+                <i className="fa-solid fa-clock-rotate-left"></i>
+                Recent Activity
+              </Link>
+              <Link to="/settings">
+                <i className="fa-solid fa-gear fa-spin"></i>
+                Settings
+              </Link>
+              <Link to="#" onClick={signoutHandler}>
+                <i className="fa-solid fa-power-off"></i>
+                Sign Out
+              </Link>
+            </div>
+          </Link>
+        ) : (
+          <Link to="/sign-in" className="login-button">
+            <i className="fa-solid fa-right-to-bracket"></i>
+            <span>Sign in</span>
+          </Link>
+        )}
       </div>
     </nav>
   );

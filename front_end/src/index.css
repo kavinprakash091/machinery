@@ -149,7 +149,8 @@
   color: #8b8b8b;
 }
 
-.help-container a {
+.help-container a,
+.profile-list-container a {
   display: block;
   width: 90%;
   padding: 5%;
@@ -158,7 +159,8 @@
   color: #8a8a8a;
 }
 
-.help-container a:hover {
+.help-container a:hover,
+.profile-list-container a:hover {
   background-color: #e2e2e2;
 }
 
@@ -167,8 +169,56 @@
   color: #313131;
 }
 
-.help-container a i {
+.help-container a i,
+.profile-list-container a i {
   margin-right: 3%;
+}
+
+.profile-list-container {
+  position: absolute;
+  display: none;
+  width: 18%;
+  margin-top: 39%;
+  margin-left: 7%;
+  background-color: #f4f4f4;
+  text-align: left;
+  border-radius: 3px;
+  z-index: 5;
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
+}
+
+.active-profile-list-container {
+  display: block;
+}
+
+.profile-image-container {
+  height: 8rem;
+  width: 8rem;
+  margin: 10% auto;
+  border-radius: 50%;
+}
+
+.profile-image-container > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-name-container {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.profile-name-container a {
+  text-decoration: none;
+  color: #313131;
+  font-weight: 500;
+}
+
+.profile-name-container a:hover {
+  background-color: #f4f4f4;
 }
 
 .loading-container {
