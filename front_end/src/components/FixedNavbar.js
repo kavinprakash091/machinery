@@ -42,7 +42,7 @@ export default function FixedNavbar() {
         </div>
       </div>
       <div className="fixed-navbar-right-section">
-        <Link to="/signin" className="login-button">
+        <Link to="/cart" className="login-button">
           <i className="fa-solid fa-cart-shopping"></i>
           <span>
             Cart<span className="cart-count-batch">5</span>
@@ -87,7 +87,7 @@ export default function FixedNavbar() {
             </Link>
           </div>
         </button>
-        <Link to="/" className="login-button">
+        <Link to="#" className="login-button">
           <i className="fa-solid fa-message"></i>
           <span>Messages</span>
         </Link>
