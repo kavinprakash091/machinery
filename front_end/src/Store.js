@@ -4,12 +4,17 @@ export const Store = createContext();
 
 const initialState = {
   machine_list: [],
+  userDetails: localStorage.getItem('userDetails')
+    ? JSON.parse(localStorage.getItem('userDetails'))
+    : null,
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'MACHINES_LISTS':
       return { ...state, machine_list: action.payload };
+    case 'SIGN_UP':
+      return { ...state, userDetails: action.payload };
     default:
       return state;
   }

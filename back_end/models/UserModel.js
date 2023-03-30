@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema({
   city: { type: String },
   country: { type: String },
   postal: { type: String },
+  isAdmin: { type: Boolean, default: false },
 });
 
 const User = mongoose.model('User', userSchema);
