@@ -1,0 +1,153 @@
+.signin-page {
+  height: 79vh;
+  width: 100%;
+  padding-top: 5%;
+  background: url('../assets/signin_background_image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.signin-container {
+  width: 40%;
+  margin: 0% auto;
+  padding-bottom: 2%;
+  background-color: #000000de;
+}
+
+.signin-header-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #e3a701;
+}
+
+.signin-button {
+  width: 50%;
+  padding: 2% 0%;
+  border: none;
+  background: none;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.active-signin-button {
+  font-weight: 400;
+  background-color: #f8c12c;
+}
+
+.signup-form-container {
+  width: 90%;
+  margin: 2% auto;
+  display: none;
+}
+
+.active-signup-form-container {
+  display: block;
+}
+
+.signin-form-container {
+  width: 90%;
+  margin: 2% auto;
+  display: none;
+}
+
+.active-signin-form-container {
+  display: block;
+}
+
+.signin-form {
+  width: 100%;
+}
+
+.signin-form div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.signin-form input {
+  height: 2.5rem;
+  width: 90%;
+  margin: 2% auto;
+  padding-left: 3%;
+  color: #ffffff;
+  font-size: 1.1rem;
+  background: none;
+  border: 1px solid #b1b1b1;
+  border-radius: 2px;
+}
+
+.signin-form input:focus {
+  outline: none;
+  border: 1px solid #f8c12c;
+}
+
+.signin-form-button {
+  padding: 2% 5%;
+  margin: 3% 0%;
+  background-color: #f8c12c;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.forgot-password-container {
+  width: 90%;
+  text-align: end;
+}
+
+.forgot-password-container a {
+  text-decoration: none;
+  color: #6420d2;
+}
+
+.or-container {
+  width: 90%;
+  margin: 3% auto 5% auto;
+  color: #888888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.or-line {
+  width: 40%;
+  text-align: center;
+  border-bottom: 1px solid #888888;
+}
+
+.google-button-container {
+  width: 60%;
+  margin: 2% auto;
+  padding: 2% 0%;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 2px;
+}
+
+.google-icon {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.google-icon > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}

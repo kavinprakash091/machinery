@@ -81,7 +81,7 @@ export default function FixedNavbar() {
           <i className="fa-solid fa-message"></i>
           <span>Messages</span>
         </Link>
-        <Link to="/signin" className="login-button">
+        <Link to="/sign-in" className="login-button">
           <i className="fa-solid fa-right-to-bracket"></i>
           <span>Sign in</span>
         </Link>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import Comment from '../components/Comment';
 import ContactHeader from '../components/ContactHeader';
@@ -10,21 +10,24 @@ import ProductLists from '../components/ProductLists';
 import RelatedImages from '../components/RelatedImages';
 import RelatedVideos from '../components/RelatedVideos';
 import Sidebar from '../components/Sidebar';
-import data from '../data';
+import { Store } from '../Store';
 import '../styles/MachineScreen.css';
 
 export default function SubMachineScreen() {
+  const { state, ctxDispatch: dispatch } = useContext(Store);
+  const { machine_list } = state;
   const { machine_name } = useParams();
   const product_name = machine_name.replace(/-/g, ' ');
   var product_details, product_detail;
-  data.sub_products.map((product, x) => {
-    product.map((sub_product, y) => {
-      if (sub_product.toLowerCase() === product_name) {
-        product_details = data.product_details[x][y];
-        product_detail = data.product_details[x];
-      }
+  machine_list &&
+    machine_list.map((product, x) => {
+      product.product_details.map((sub_product, y) => {
+        if (sub_product.name.toLowerCase() === product_name) {
+          product_details = sub_product;
+          product_detail = product.product_details;
+        }
+      });
     });
-  });
 
   return (
     <section className="machine-page">
