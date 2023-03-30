@@ -19,6 +19,17 @@ const productSchema = new mongoose.Schema(
         description: { type: String },
         additional_information: { type: [String] },
         likes: { type: String, required: true },
+        sub_product: [
+          {
+            name: { type: String, required: true },
+            category: { type: String, required: true },
+            image: { type: String, required: true },
+            price: { type: Number, required: true },
+            countInStocks: { type: Number, required: true },
+            ratings: { type: Number, required: true },
+            numReviews: { type: Number, required: true },
+          },
+        ],
         related_image: { type: [String], required: true },
         related_video: { type: [String], required: true },
         related_blueprint: { type: [String], required: true },

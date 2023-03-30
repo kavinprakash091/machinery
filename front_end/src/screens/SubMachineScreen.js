@@ -18,13 +18,12 @@ export default function SubMachineScreen() {
   const { machine_list } = state;
   const { machine_name } = useParams();
   const product_name = machine_name.replace(/-/g, ' ');
-  var product_details, product_detail;
+  var product_details;
   machine_list &&
     machine_list.map((product, x) => {
       product.product_details.map((sub_product, y) => {
         if (sub_product.name.toLowerCase() === product_name) {
           product_details = sub_product;
-          product_detail = product.product_details;
         }
       });
     });
@@ -41,7 +40,10 @@ export default function SubMachineScreen() {
           <h1>{product_details.name} </h1> <p>{product_details.description}</p>{' '}
         </div>{' '}
         <ProductDetails product_detail={product_details} />
-        <ProductLists machines={product_detail} />
+        <h1 className="machine-parts-header">
+          <i className="fa-solid fa-wrench fa-shake"></i> Machine Parts
+        </h1>
+        <ProductLists machines={product_details.sub_product} />
         <RelatedImages
           icon="fa-solid fa-camera fa-shake"
           heading="Related Images"

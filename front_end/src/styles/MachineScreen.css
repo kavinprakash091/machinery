@@ -249,6 +249,12 @@
   background-color: #ffbb00;
 }
 
+.machine-parts-header {
+  width: 90%;
+  margin: 3% auto;
+  color: #313131;
+}
+
 .machine-card-container {
   width: 90%;
   margin: 3% auto;
