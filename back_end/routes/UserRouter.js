@@ -29,4 +29,46 @@ userRouter.put(
   })
 );
 
+userRouter.post(
+  '/sign-in',
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findOne({ email: req.body.email }).select(
+      '+password'
+    );
+    if (!user) {
+      res.status(404).send({ message: 'Account not found!' });
+      return;
+    }
+    if (bcrypt.compareSync(req.body.password, user.password)) {
+      if (user.isAdmin) {
+        res.send({
+          username: user.username,
+          email: user.email,
+          phone: user.phone,
+          address: user.address,
+          city: user.city,
+          country: user.country,
+          postal: user.postal,
+          isAdmin: user.isAdmin,
+        });
+        return;
+      } else {
+        res.send({
+          username: user.username,
+          email: user.email,
+          phone: user.phone,
+          address: user.address,
+          city: user.city,
+          country: user.country,
+          postal: user.postal,
+        });
+        return;
+      }
+    } else {
+      res.status(404).send({ message: 'Invalid password!' });
+      return;
+    }
+  })
+);
+
 export default userRouter;

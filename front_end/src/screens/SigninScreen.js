@@ -61,8 +61,23 @@ export default function SigninScreen() {
     }
   };
 
-  const signinHandler = (e) => {
+  const signinHandler = async (e) => {
     e.preventDefault();
+    try {
+      dispatch({ type: 'FETCH_REQUEST' });
+      const { data } = await Axios.post('/users/sign-in', {
+        email: signinEmail,
+        password: signinPassword,
+      });
+      localStorage.setItem('userDetails', JSON.stringify(data));
+      ctxDispatch({ type: 'SIGN_IN', payload: data });
+      toast.success(data.username + ' signed in successfully!');
+      navigate('/');
+      dispatch({ type: 'FETCH_SUCCESS' });
+    } catch (err) {
+      dispatch({ type: 'FETCH_FAILED' });
+      toast.error(getError(err));
+    }
   };
   return (
     <div>

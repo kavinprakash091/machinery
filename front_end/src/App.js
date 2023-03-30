@@ -13,7 +13,11 @@ function App() {
   return (
     <div className="App">
       <FixedNavbar />
-      <ToastContainer position="top-right mt-1" limit={1} />
+      <ToastContainer
+        position="top-right"
+        style={{ marginTop: '3rem' }}
+        limit={1}
+      />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/sign-in" element={<SigninScreen />} />
