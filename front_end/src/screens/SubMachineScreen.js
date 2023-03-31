@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Comment from '../components/Comment';
 import ContactHeader from '../components/ContactHeader';
@@ -27,6 +27,10 @@ export default function SubMachineScreen() {
         }
       });
     });
+
+  useEffect(() => {
+    window.scrollTo(0, 1050);
+  }, []);
 
   return (
     <section className="machine-page">

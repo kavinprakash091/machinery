@@ -1,22 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ContactFooter from '../components/ContactFooter';
+import ContactHeader from '../components/ContactHeader';
 import Footer from '../components/Footer';
+import MessageBox from '../components/MessageBox';
+import Navbar from '../components/Navbar';
+import NewsHome from '../components/NewsHome';
+import PageHeader from '../components/PageHeader';
 import '../styles/CartScreen.css';
 
 export default function CartScreen() {
+  useEffect(() => {
+    window.scrollTo(0, 620);
+  }, []);
   return (
     <section className="cart-page">
+      <PageHeader />
+      <ContactHeader />
+      <Navbar />
+      <NewsHome content="shopping cart" />
       <div className="cart-header">
         <i class="fa-solid fa-cart-shopping fa-shake"></i>
         <h1>
           Shopping <span className="important">Cart</span>
         </h1>
       </div>
-      <div className="message-box">
-        Cart empty
-        <Link to="/machines"> Go to Shopping</Link>
-      </div>
+      <MessageBox message="Cart empty" url="Go to Shopping" color="#3fd7fd" />
       <div className="cart-container">
         <div className="cart-items-container">
           <div className="cart-item-card">

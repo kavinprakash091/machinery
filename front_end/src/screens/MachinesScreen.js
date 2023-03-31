@@ -2,6 +2,7 @@ import Axios from 'axios';
 import React, { useContext, useEffect, useReducer } from 'react';
 import ContactHeader from '../components/ContactHeader';
 import Loading from '../components/Loading';
+import MessageBox from '../components/MessageBox';
 import Navbar from '../components/Navbar';
 import NewsHome from '../components/NewsHome';
 import PageHeader from '../components/PageHeader';
@@ -18,7 +19,7 @@ const reducer = (state, action) => {
     case 'FETCH_SUCCESS':
       return { ...state, loading: false };
     case 'FETCH_FAILED':
-      return { ...state, loading: false };
+      return { ...state, loading: false, error: action.error };
     default:
       return state;
   }
@@ -29,9 +30,15 @@ export default function MachinesScreen() {
   const { machine_list } = state;
   console.log(machine_list);
 
-  const [{ loading }, dispatch] = useReducer(reducer, {
+  const [{ loading, error }, dispatch] = useReducer(reducer, {
     loading: false,
+    error: '',
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 1050);
+  }, []);
+
   useEffect(() => {
     const fetchMachines = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
@@ -40,8 +47,7 @@ export default function MachinesScreen() {
         dispatch({ type: 'FETCH_SUCCESS' });
         ctxDispatch({ type: 'MACHINES_LISTS', payload: data });
       } catch (err) {
-        alert(getError(err));
-        dispatch({ type: 'FETCH_FAILED' });
+        dispatch({ type: 'FETCH_FAILED', error: getError(err) });
       }
     };
     fetchMachines();
@@ -56,6 +62,7 @@ export default function MachinesScreen() {
       <NewsHome content="latest machines" />
       <Sidebar />
       <div className="machines-container">
+        {error && <MessageBox message={error} url="" color="#3fd7fd" />}
         {machine_list &&
           machine_list.map((product, index) => (
             <div className="product-machines-container" key={index}>
