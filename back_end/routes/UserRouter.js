@@ -2,6 +2,7 @@ import express from 'express';
 import User from '../models/UserModel.js';
 import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcryptjs';
+import { generateToken } from '../Utils.js';
 
 const userRouter = express.Router();
 
@@ -24,6 +25,7 @@ userRouter.put(
       username: userSignup.username,
       email: userSignup.email,
       phone: userSignup.phone,
+      token: generateToken(userSignup),
     });
     return;
   })
@@ -50,6 +52,7 @@ userRouter.post(
           country: user.country,
           postal: user.postal,
           isAdmin: user.isAdmin,
+          token: generateToken(user),
         });
         return;
       } else {
@@ -61,6 +64,7 @@ userRouter.post(
           city: user.city,
           country: user.country,
           postal: user.postal,
+          token: generateToken(user),
         });
         return;
       }
