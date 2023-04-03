@@ -8,7 +8,7 @@ export default function Sidebar() {
   const { machine_list } = state;
   const [activeNav, setActiveNav] = useState(0);
   return (
-    <section>
+    machine_list && (
       <nav className="sidebar">
         <div className="sidebar-header"> Our Product </div>
         <ul className="product-lists">
@@ -77,6 +77,6 @@ export default function Sidebar() {
           </li>
         </ul>
       </nav>
-    </section>
+    )
   );
 }

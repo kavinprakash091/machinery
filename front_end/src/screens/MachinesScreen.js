@@ -28,7 +28,6 @@ const reducer = (state, action) => {
 export default function MachinesScreen() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { machine_list } = state;
-  console.log(machine_list);
 
   const [{ loading, error }, dispatch] = useReducer(reducer, {
     loading: false,
@@ -45,6 +44,7 @@ export default function MachinesScreen() {
       try {
         const { data } = await Axios.get('/machines');
         dispatch({ type: 'FETCH_SUCCESS' });
+        localStorage.setItem('machineLists', JSON.stringify(data));
         ctxDispatch({ type: 'MACHINES_LISTS', payload: data });
       } catch (err) {
         dispatch({ type: 'FETCH_FAILED', error: getError(err) });
@@ -55,14 +55,19 @@ export default function MachinesScreen() {
 
   return (
     <section className="machine-page">
-      {loading && <Loading />}
+      {loading && (
+        <div className="machine-loading">
+          {' '}
+          <Loading />
+        </div>
+      )}
       <PageHeader />
       <ContactHeader />
       <Navbar />
       <NewsHome content="latest machines" />
       <Sidebar />
       <div className="machines-container">
-        {error && <MessageBox message={error} url="" color="#3fd7fd" />}
+        {error && <MessageBox message={error} url="" color="#ff5454" />}
         {machine_list &&
           machine_list.map((product, index) => (
             <div className="product-machines-container" key={index}>

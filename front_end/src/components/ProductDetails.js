@@ -1,10 +1,32 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/MachineScreen.css';
 import Ratings from './Ratings';
+import { Store } from '../Store';
 
 export default function ProductDetails({ product_detail }) {
   const [isLiked, setIsLiked] = useState(false);
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { cartItems } = state;
+
+  const addToCartHandler = (product_category, product_name) => {
+    const existItem = cartItems.find((x) => x.name === product_name);
+    if (existItem) {
+      cartItems.map((x) => {
+        if (x.name === product_name) {
+          x.quantity = x.quantity + 1;
+        }
+      });
+    } else {
+      cartItems.push({
+        category: product_category,
+        name: product_name,
+        quantity: 1,
+      });
+    }
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    ctxDispatch({ type: 'ADD_TO_CART', payload: cartItems });
+  };
   return (
     <section className="machine-detail-container">
       <div className="machine-detail-left-section">
@@ -76,7 +98,12 @@ export default function ProductDetails({ product_detail }) {
             </div>
           )}
         </div>
-        <button className="add-to-cart-button1">
+        <button
+          className="add-to-cart-button1"
+          onClick={() =>
+            addToCartHandler(product_detail.category, product_detail.name)
+          }
+        >
           ADD TO CART <i className="fa-solid fa-cart-shopping fa-shake"> </i>{' '}
         </button>{' '}
       </div>

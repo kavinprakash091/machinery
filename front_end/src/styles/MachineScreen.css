@@ -1,3 +1,11 @@
+.machine-loading {
+  position: fixed;
+  margin-top: -3.5%;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+}
+
 .sidebar {
   position: absolute;
   margin-top: -3%;
@@ -405,7 +413,8 @@
   z-index: 100;
 }
 
-.machine-related-images-card > img {
+.machine-related-images-card > img,
+.big-machine-related-images-card > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -419,7 +428,7 @@
   margin-top: -15%;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #ffffff;
+  color: #6d6d6d;
   text-align: end;
 }
 
@@ -430,7 +439,7 @@
   margin-top: -7%;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #ffffff;
+  color: #6d6d6d;
   text-align: end;
 }
 
@@ -457,7 +466,7 @@
   justify-content: center;
   gap: 0.5rem;
   text-decoration: none;
-  background-color: #ececec;
+  background-color: #c3c3c3;
 }
 
 .big-machine-related-images-download {

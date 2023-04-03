@@ -5,7 +5,7 @@ import { Store } from '../Store';
 
 export default function FixedNavbar() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
-  const { userDetails } = state;
+  const { userDetails, cartItems } = state;
   const [search, setSearch] = useState('');
   const [activeProfile, setActiveProfile] = useState(false);
   const submitHandler = (e) => {
@@ -45,7 +45,10 @@ export default function FixedNavbar() {
         <Link to="/cart" className="login-button">
           <i className="fa-solid fa-cart-shopping"></i>
           <span>
-            Cart<span className="cart-count-batch">5</span>
+            Cart
+            <span className="cart-count-batch">
+              {cartItems.reduce((s, a) => s + a.quantity, 0)}
+            </span>
           </span>
         </Link>
         <button className="login-button help-button">
