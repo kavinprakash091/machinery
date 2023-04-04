@@ -42,13 +42,16 @@ export default function FixedNavbar() {
         </div>
       </div>
       <div className="fixed-navbar-right-section">
-        <Link to="/cart" className="login-button">
+        <Link to={userDetails ? '/cart' : '/sign-in'} className="login-button">
           <i className="fa-solid fa-cart-shopping"></i>
+
           <span>
             Cart
-            <span className="cart-count-batch">
-              {cartItems.reduce((s, a) => s + a.quantity, 0)}
-            </span>
+            {userDetails && cartItems.length > 0 && (
+              <span className="cart-count-batch">
+                {cartItems.reduce((s, a) => s + a.quantity, 0)}
+              </span>
+            )}
           </span>
         </Link>
         <button className="login-button help-button">
