@@ -110,7 +110,7 @@
 
 .sub-total-container {
     width: 25%;
-    padding: 2%;
+    padding: 2% 2% 3% 2%;
     border-radius: 5px;
     box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
 }
@@ -119,10 +119,15 @@
     color: #474747;
 }
 
+.sub-total-container h1:nth-child(2) {
+    margin-bottom: 15%;
+}
+
 .proceed-to-checkout-button {
-    width: 80%;
-    margin: 10% 7% 1% 10%;
-    padding: 3% 0%;
+    padding: 3% 5%;
+    margin: 5% 13%;
+    text-decoration: none;
+    color: #000000;
     background-color: #f8c12c;
     border: 1px solid #313131;
     border-radius: 5px;

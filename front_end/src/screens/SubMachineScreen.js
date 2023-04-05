@@ -29,7 +29,7 @@ export default function SubMachineScreen() {
     });
 
   useEffect(() => {
-    window.scrollTo(0, 1050);
+    window.scrollTo(0, 475);
   }, []);
 
   return (

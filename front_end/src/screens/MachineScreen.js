@@ -7,7 +7,6 @@ import NewsHome from '../components/NewsHome';
 import PageHeader from '../components/PageHeader';
 import ProductLists from '../components/ProductLists';
 import Sidebar from '../components/Sidebar';
-import data from '../data';
 import { Store } from '../Store';
 import '../styles/MachineScreen.css';
 
@@ -24,6 +23,10 @@ export default function MachineScreen() {
     machine_list.map((product, index) => {
       product.name.toLowerCase() === product_name && (product_index = index);
     });
+
+  useEffect(() => {
+    window.scrollTo(0, 475);
+  }, []);
 
   return (
     <section className="machine-page">

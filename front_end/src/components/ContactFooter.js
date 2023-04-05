@@ -38,7 +38,7 @@ export default function ContactFooter() {
             <i className="fa-brands fa-linkedin-in"></i>
           </Link>
           <Link to="https://www.google.com">
-            <i className="fa-brands fa-dribbble"></i>
+            <i className="fa-brands fa-youtube"></i>
           </Link>
         </div>
       </div>

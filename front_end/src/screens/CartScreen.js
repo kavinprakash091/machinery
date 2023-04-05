@@ -30,7 +30,7 @@ export default function CartScreen() {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    window.scrollTo(0, 620);
+    window.scrollTo(0, 475);
   }, []);
 
   const removeCartHandler = (product_name) => {
@@ -118,7 +118,7 @@ export default function CartScreen() {
         <MessageBox message="Cart empty" url="Go to Shopping" color="#3fd7fd" />
       )}
       {error && (
-        <MessageBox message={error} url="" color="#ff5454" close={false} />
+        <MessageBox message={error} url="" color="#ff8282" close={false} />
       )}
       <div className="cart-container">
         {cartItems.length > 0 && (
@@ -191,9 +191,9 @@ export default function CartScreen() {
               <h1>
                 Rs {cartItems.reduce((s, a) => s + a.quantity * a.price, 0)} /-
               </h1>
-              <button type="button" className="proceed-to-checkout-button">
+              <Link to="/shipping" className="proceed-to-checkout-button">
                 Proceed to Checkout
-              </button>
+              </Link>
             </div>
           </div>
         )}

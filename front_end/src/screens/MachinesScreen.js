@@ -27,7 +27,7 @@ const reducer = (state, action) => {
 
 export default function MachinesScreen() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
-  const { machine_list } = state;
+  const { userDetails, machine_list, cartItems } = state;
 
   const [{ loading, error }, dispatch] = useReducer(reducer, {
     loading: false,
@@ -35,7 +35,7 @@ export default function MachinesScreen() {
   });
 
   useEffect(() => {
-    window.scrollTo(0, 1050);
+    window.scrollTo(0, 475);
   }, []);
 
   useEffect(() => {
@@ -43,6 +43,16 @@ export default function MachinesScreen() {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const { data } = await Axios.get('/machines');
+        userDetails &&
+          cartItems.map((cartItem) => {
+            data
+              .find((x) => x.name === cartItem.category)
+              .product_details.map((y) => {
+                if (y.name === cartItem.name) {
+                  y.countInStocks = y.countInStocks - cartItem.quantity;
+                }
+              });
+          });
         dispatch({ type: 'FETCH_SUCCESS' });
         localStorage.setItem('machineLists', JSON.stringify(data));
         ctxDispatch({ type: 'MACHINES_LISTS', payload: data });

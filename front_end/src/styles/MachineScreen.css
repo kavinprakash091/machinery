@@ -1,664 +1,664 @@
 .machine-loading {
-  position: fixed;
-  margin-top: -3.5%;
-  height: 100vh;
-  width: 100%;
-  z-index: 1000;
+    position: fixed;
+    margin-top: 6.5%;
+    height: 95vh;
+    width: 100%;
+    z-index: 1000;
 }
 
 .sidebar {
-  position: absolute;
-  margin-top: -3%;
-  width: 20%;
-  background-color: #313131;
+    position: absolute;
+    margin-top: -3%;
+    width: 20%;
+    background-color: #313131;
 }
 
 .sidebar-header {
-  width: 100%;
-  padding: 5% 0%;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-align: center;
-  border-bottom: 1px solid #c3c3c3;
+    width: 100%;
+    padding: 5% 0%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 1px solid #c3c3c3;
 }
 
 .product-lists {
-  width: 100%;
-  list-style: none;
+    width: 100%;
+    list-style: none;
 }
 
 .product-lists li {
-  padding: 5%;
-  color: #c2c2c2;
-  border-bottom: 1px solid #7c7c7c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  cursor: pointer;
+    padding: 5%;
+    color: #c2c2c2;
+    border-bottom: 1px solid #7c7c7c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .product-list-items {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .product-list-items a {
-  color: #c2c2c2;
-  text-decoration: none;
+    color: #c2c2c2;
+    text-decoration: none;
 }
 
 .product-lists li p {
-  font-size: 0.8rem;
-  color: #7c7c7c;
+    font-size: 0.8rem;
+    color: #7c7c7c;
 }
 
 .sub-product-lists {
-  width: 100%;
+    width: 100%;
 }
 
 .sub-product-lists li {
-  display: none;
+    display: none;
 }
 
 .sub-product-lists-active li {
-  margin-left: 5%;
-  border: none;
-  width: 100%;
-  color: #a2a2a2;
-  display: inline-block;
+    margin-left: 5%;
+    border: none;
+    width: 100%;
+    color: #a2a2a2;
+    display: inline-block;
 }
 
 .sub-product-lists-active li a {
-  margin-left: 3%;
-  text-decoration: none;
-  color: #a2a2a2;
+    margin-left: 3%;
+    text-decoration: none;
+    color: #a2a2a2;
 }
 
 .machine-view-all-button {
-  padding: 3%;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  color: #c2c2c2;
+    padding: 3%;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #c2c2c2;
 }
 
 .machine-page {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .machines-container {
-  position: absolute;
-  width: 80%;
-  height: 95vh;
-  margin-top: -2%;
-  margin-left: 20%;
-  overflow-x: hidden;
-  overflow: scroll;
+    position: absolute;
+    width: 80%;
+    height: 94vh;
+    padding-bottom: 3%;
+    margin-top: -3%;
+    margin-left: 20%;
+    overflow-x: hidden;
+    overflow: scroll;
 }
 
 .machine-header-container h1 {
-  margin: 3% 0% 1% 3%;
-  color: #313131;
+    margin: 3% 0% 1% 3%;
+    color: #313131;
 }
 
 .machine-header-container p {
-  margin: 1% 3%;
-  font-size: 1.2rem;
-  color: #7c7c7c;
-  text-align: justify;
+    margin: 1% 3%;
+    font-size: 1.2rem;
+    color: #7c7c7c;
+    text-align: justify;
 }
 
 .machine-detail-container {
-  height: 120vh;
-  width: 90%;
-  margin: 5% auto;
-  box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  cursor: pointer;
+    height: 120vh;
+    width: 90%;
+    margin: 5% auto;
+    box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
 }
 
 .machine-detail-left-section {
-  height: 50%;
-  width: 45%;
+    height: 50%;
+    width: 45%;
 }
 
-.machine-detail-left-section > img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.machine-detail-left-section>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
-.machine-detail-left-section > img:hover {
-  transition: 0.5s;
-  transform: scale(1.03);
+.machine-detail-left-section>img:hover {
+    transition: 0.5s;
+    transform: scale(1.03);
 }
 
 .machine-like-container {
-  width: 90%;
-  margin: 23% auto;
-  padding: 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width: 90%;
+    margin: 23% auto;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .machine-like {
-  color: #7c7c7c;
+    color: #7c7c7c;
 }
 
 .machine-liked i {
-  color: #ff2828;
+    color: #ff2828;
 }
 
 .machine-share a {
-  font-size: 1.3rem;
-  text-decoration: none;
-  color: #24a887;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #24a887;
 }
 
 .machine-detail-right-section {
-  height: 90%;
-  width: 45%;
-  padding: 2%;
-  box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
+    height: 90%;
+    width: 45%;
+    padding: 2%;
+    box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
 }
 
 .machine-name1 {
-  text-decoration: none;
-  color: #313131;
-  font-size: 1.3rem;
-  font-weight: 600;
+    text-decoration: none;
+    color: #313131;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .review-container1 {
-  width: 45%;
-  margin-top: 2%;
-  color: #f8c12c;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width: 45%;
+    margin-top: 2%;
+    color: #f8c12c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .available-products1,
 .machine-price1,
 .minimum-order-quantity {
-  margin-top: 3%;
-  color: #7c7c7c;
+    margin-top: 3%;
+    color: #7c7c7c;
 }
 
 .minimum-order-quantity span {
-  color: #313131;
-  font-weight: 600;
+    color: #313131;
+    font-weight: 600;
 }
 
 .machine-information-container {
-  width: 100%;
-  height: 70%;
-  margin-top: 3%;
-  overflow-x: hidden;
-  overflow: scroll;
+    width: 100%;
+    height: 70%;
+    margin-top: 3%;
+    overflow-x: hidden;
+    overflow: scroll;
 }
 
 .machine-detail-table {
-  width: 95%;
-  margin: 0% auto;
-  border-collapse: collapse;
+    width: 95%;
+    margin: 0% auto;
+    border-collapse: collapse;
 }
 
 .machine-detail-table td {
-  width: 50%;
-  padding: 2%;
-  border: 1px solid #e4e4e4;
+    width: 50%;
+    padding: 2%;
+    border: 1px solid #e4e4e4;
 }
 
 .machine-detail-table tr td:nth-child(1) {
-  color: #7c7c7c;
+    color: #7c7c7c;
 }
 
 .machine-information-container p {
-  padding: 3%;
-  color: #7c7c7c;
-  text-align: justify;
+    padding: 3%;
+    color: #7c7c7c;
+    text-align: justify;
 }
 
 .machine-information-container h2 {
-  color: #6d6d6d;
-  font-size: 1.3rem;
-  padding: 3%;
+    color: #6d6d6d;
+    font-size: 1.3rem;
+    padding: 3%;
 }
 
 .machine-information-container ul {
-  padding: 0% 8%;
-  color: #7c7c7c;
+    padding: 0% 8%;
+    color: #7c7c7c;
 }
 
 .add-to-cart-button1 {
-  margin-top: -1%;
-  margin-left: 25%;
-  padding: 2% 10%;
-  font-size: 1rem;
-  font-weight: 500;
-  background-color: #f8c12c;
-  color: #313131;
-  border: 1px solid #313131;
-  border-radius: 3px;
-  cursor: pointer;
+    margin-top: -1%;
+    margin-left: 25%;
+    padding: 2% 10%;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #f8c12c;
+    color: #313131;
+    border: 1px solid #313131;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .add-to-cart-button1:hover {
-  background-color: #ffbb00;
+    background-color: #ffbb00;
 }
 
 .machine-parts-header {
-  width: 90%;
-  margin: 3% auto;
-  color: #313131;
+    width: 90%;
+    margin: 3% auto;
+    color: #313131;
 }
 
 .machine-card-container {
-  width: 90%;
-  margin: 3% auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 2rem;
+    width: 90%;
+    margin: 3% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .machine-card {
-  width: 30%;
-  height: 75vh;
-  padding-top: 1.5%;
-  box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
-  border-radius: 5px;
-  cursor: pointer;
+    width: 30%;
+    height: 75vh;
+    padding-top: 1.5%;
+    box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .machine-card:hover {
-  transition: 0.8s;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: 0.8s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .machine-image-container {
-  height: 50%;
-  width: 90%;
-  margin: 0% auto;
+    height: 50%;
+    width: 90%;
+    margin: 0% auto;
 }
 
-.machine-image-container > img:hover {
-  transition: 0.5s;
-  transform: scale(1.05);
+.machine-image-container>img:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
 }
 
-.machine-image-container > img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.machine-image-container>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .machine-card-detail-container {
-  width: 100%;
-  padding: 8% 5%;
+    width: 100%;
+    padding: 8% 5%;
 }
 
 .machine-name {
-  text-decoration: none;
-  color: #313131;
-  font-size: 1.3rem;
-  font-weight: 500;
+    text-decoration: none;
+    color: #313131;
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
 .review-container {
-  margin-top: 5%;
-  width: 90%;
-  color: #f8c12c;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 1rem;
+    margin-top: 5%;
+    width: 90%;
+    color: #f8c12c;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
 }
 
 .review-container p {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .star-container {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .available-products {
-  margin-top: 5%;
-  color: #7c7c7c;
+    margin-top: 5%;
+    color: #7c7c7c;
 }
 
 .available-batch {
-  padding: 1% 3%;
-  background-color: green;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #ffffff;
-  border-radius: 3px;
+    padding: 1% 3%;
+    background-color: green;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #ffffff;
+    border-radius: 3px;
 }
 
 .out-of-stock-batch {
-  padding: 1% 3%;
-  background-color: #ad0000;
-  font-size: 0.8rem;
-  color: #ffffff;
-  border-radius: 3px;
+    padding: 1% 3%;
+    background-color: #ad0000;
+    font-size: 0.8rem;
+    color: #ffffff;
+    border-radius: 3px;
 }
 
 .machine-price {
-  margin-top: 5%;
-  color: #7c7c7c;
+    margin-top: 5%;
+    color: #7c7c7c;
 }
 
 .add-to-cart-button {
-  margin-top: 5%;
-  padding: 2% 5%;
-  font-size: 1rem;
-  font-weight: 500;
-  background-color: #f8c12c;
-  color: #313131;
-  border: 1px solid #313131;
-  border-radius: 3px;
-  cursor: pointer;
+    margin-top: 5%;
+    padding: 2% 5%;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #f8c12c;
+    color: #313131;
+    border: 1px solid #313131;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .add-to-cart-button:hover {
-  background-color: #ffbb00;
+    background-color: #ffbb00;
 }
 
 .out-of-stock {
-  background-color: #e4e4e4ad;
+    background-color: #e4e4e4ad;
 }
 
 .out-of-stock:hover {
-  background-color: #c3c3c3;
+    background-color: #c3c3c3;
 }
 
 .machine-related-images-container,
 .machine-related-video-container {
-  width: 95%;
-  margin: 5% auto;
+    width: 95%;
+    margin: 5% auto;
 }
 
 .machine-related-images-container h2,
 .machine-related-video-container h2 {
-  padding: 1%;
-  color: #313131;
+    padding: 1%;
+    color: #313131;
 }
 
 .machine-related-images-card-container {
-  height: 40vh;
-  width: 100%;
-  margin: 3% auto;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
+    height: 40vh;
+    width: 100%;
+    margin: 3% auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .big-related-image-container {
-  height: auto;
+    height: auto;
 }
 
 .machine-related-images-card {
-  position: relative;
-  width: 30%;
-  height: 40vh;
+    position: relative;
+    width: 30%;
+    height: 40vh;
 }
 
 .big-machine-related-images-card {
-  position: absolute;
-  height: 70%;
-  width: 95%;
-  z-index: 100;
+    position: absolute;
+    height: 70%;
+    width: 95%;
+    z-index: 100;
 }
 
-.machine-related-images-card > img,
-.big-machine-related-images-card > img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  cursor: pointer;
+.machine-related-images-card>img,
+.big-machine-related-images-card>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .machine-related-images-card-footer {
-  position: absolute;
-  padding: 2% 5%;
-  width: 90%;
-  margin-top: -15%;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #6d6d6d;
-  text-align: end;
+    position: absolute;
+    padding: 2% 5%;
+    width: 90%;
+    margin-top: -15%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #6d6d6d;
+    text-align: end;
 }
 
 .big-machine-related-images-card-footer {
-  position: absolute;
-  padding: 2% 7%;
-  width: 90%;
-  margin-top: -7%;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #6d6d6d;
-  text-align: end;
+    position: absolute;
+    padding: 2% 7%;
+    width: 90%;
+    margin-top: -7%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #6d6d6d;
+    text-align: end;
 }
 
 .big-machine-related-images-card-footer i {
-  margin-left: 3%;
-  cursor: pointer;
+    margin-left: 3%;
+    cursor: pointer;
 }
 
 .machine-related-images-card-footer i {
-  margin-left: 10%;
-  cursor: pointer;
+    margin-left: 10%;
+    cursor: pointer;
 }
 
 .machine-related-images-download {
-  position: absolute;
-  margin-top: -22%;
-  margin-left: 55%;
-  height: 2rem;
-  width: 7rem;
-  color: #313131;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  background-color: #c3c3c3;
+    position: absolute;
+    margin-top: -22%;
+    margin-left: 55%;
+    height: 2rem;
+    width: 7rem;
+    color: #313131;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    background-color: #c3c3c3;
 }
 
 .big-machine-related-images-download {
-  margin-top: -7%;
-  margin-left: 76%;
+    margin-top: -7%;
+    margin-left: 76%;
 }
 
-.machine-related-images-card > img:hover {
-  transition: 0.5s;
-  transform: scale(1.05);
+.machine-related-images-card>img:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
 }
 
-.big-machine-related-images-card > img:hover {
-  transition: 0.5s;
-  transform: scale(1);
+.big-machine-related-images-card>img:hover {
+    transition: 0.5s;
+    transform: scale(1);
 }
 
 .machine-related-videos-container {
-  height: 50vh;
-  width: 100%;
-  margin: 3% auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 2rem;
-  overflow: hidden;
+    height: 50vh;
+    width: 100%;
+    margin: 3% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
 }
 
 .big-machine-related-video {
-  height: auto;
+    height: auto;
 }
 
 .machine-related-video {
-  height: 50vh;
-  width: 80%;
-  object-fit: cover;
+    height: 50vh;
+    width: 80%;
+    object-fit: cover;
 }
 
 .machine-comment-container {
-  height: 50vh;
-  width: 90%;
-  margin: 5% auto;
+    height: 50vh;
+    width: 90%;
+    margin: 5% auto;
 }
 
 .machine-comment-header {
-  width: 90%;
-  padding: 1% 5%;
-  color: #313131;
-  font-weight: 500;
-  background-color: #eeeeee;
+    width: 90%;
+    padding: 1% 5%;
+    color: #313131;
+    font-weight: 500;
+    background-color: #eeeeee;
 }
 
 .machine-comment-form-container {
-  width: 90%;
-  margin: 3% auto;
+    width: 90%;
+    margin: 3% auto;
 }
 
 .machine-comment-form-container h1 {
-  color: #666666;
+    color: #666666;
 }
 
 .machine-comment-form input,
 .machine-comment-form textarea {
-  height: 3rem;
-  width: 100%;
-  padding-left: 2%;
-  margin: 1% auto;
-  border: 1px solid #eeeeee;
+    height: 3rem;
+    width: 100%;
+    padding-left: 2%;
+    margin: 1% auto;
+    border: 1px solid #eeeeee;
 }
 
 .machine-comment-form textarea {
-  padding-top: 2%;
-  height: auto;
+    padding-top: 2%;
+    height: auto;
 }
 
 .machine-comment-form input::placeholder,
 .machine-comment-form textarea::placeholder {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .machine-comment-form input:focus,
 .machine-comment-form textarea:focus {
-  outline: none;
-  border: 1px solid #666666;
+    outline: none;
+    border: 1px solid #666666;
 }
 
 .machine-post-comment-button {
-  padding: 1% 2%;
-  border: none;
-  background-color: #f8c12c;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
-  cursor: pointer;
+    padding: 1% 2%;
+    border: none;
+    background-color: #f8c12c;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 .machine-recent-comment-container {
-  width: 90%;
-  margin: 5% auto 0% auto;
+    width: 90%;
+    margin: 5% auto 0% auto;
 }
 
 .machine-recent-comment-container h1 {
-  color: #666666;
-  border-bottom: 1px solid #989898;
+    color: #666666;
+    border-bottom: 1px solid #989898;
 }
 
 .machine-recent-comment-details-container {
-  height: 50vh;
-  width: 90%;
-  margin: 3% auto;
-  overflow: hidden;
+    height: 50vh;
+    width: 90%;
+    margin: 3% auto;
+    overflow: hidden;
 }
 
 .big-machine-comment {
-  height: auto;
+    height: auto;
 }
 
 .machine-recent-comment-details {
-  margin-top: 2%;
-  border-bottom: 1px solid #989898;
+    margin-top: 2%;
+    border-bottom: 1px solid #989898;
 }
 
 .machine-recent-comment-details-header {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
 }
 
 .machine-recent-comment-details-image {
-  height: 3rem;
-  width: 3rem;
-  border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
 }
 
-.machine-recent-comment-details-image > img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.machine-recent-comment-details-image>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .machine-recent-comment-name-details {
-  color: #989898;
-  font-size: 0.8rem;
-  font-weight: 500;
+    color: #989898;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
 .machine-recent-comment-name-details h1 {
-  color: #666666;
-  font-size: 1rem;
-  font-weight: 500;
-  border-bottom: none;
+    color: #666666;
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: none;
 }
 
 .machine-recent-comment-details-content {
-  width: 90%;
-  margin: 2% 0% 2% 7%;
-  color: #666666;
-  text-align: justify;
+    width: 90%;
+    margin: 2% 0% 2% 7%;
+    color: #666666;
+    text-align: justify;
 }
 
 .machine-comment-like-container {
-  width: 100%;
-  color: #7c7c7c;
-  padding: 0% 3%;
-  font-size: 0.8rem;
-  font-weight: 500;
+    width: 100%;
+    color: #7c7c7c;
+    padding: 0% 3%;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
 .machine-comment-like-container i {
-  font-size: 1rem;
-  cursor: pointer;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .machine-comment-liked {
-  color: #3364ae;
+    color: #3364ae;
 }

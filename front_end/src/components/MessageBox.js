@@ -13,7 +13,7 @@ export default function MessageBox({ message, url, color, close }) {
       <div className="content-container">
         {message} {url && <Link to="/machines"> {url} </Link>}
       </div>
-      {color === '#ff5454' && (
+      {color === '#ff8282' && (
         <div className="close-container" onClick={() => setIsClose(true)}>
           <i className="fa-solid fa-xmark"></i>
         </div>
