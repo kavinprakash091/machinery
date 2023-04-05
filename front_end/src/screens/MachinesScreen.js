@@ -35,7 +35,7 @@ export default function MachinesScreen() {
   });
 
   useEffect(() => {
-    window.scrollTo(0, 475);
+    window.scrollTo(0, 500);
   }, []);
 
   useEffect(() => {

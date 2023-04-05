@@ -30,7 +30,7 @@ export default function CartScreen() {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    window.scrollTo(0, 475);
+    window.scrollTo(0, 500);
   }, []);
 
   const removeCartHandler = (product_name) => {
