@@ -3,6 +3,7 @@ import FixedNavbar from './components/FixedNavbar';
 import HomeScreen from './screens/HomeScreen';
 import MachineScreen from './screens/MachineScreen';
 import MachinesScreen from './screens/MachinesScreen';
+import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import NewsScreen from './screens/NewsScreen';
 import SigninScreen from './screens/SigninScreen';
 import SubMachineScreen from './screens/SubMachineScreen';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<HomeScreen />} />
         <Route path="/sign-in" element={<SigninScreen />} />
         <Route path="/cart" element={<CartScreen />} />
+        <Route path="/shipping" element={<ShippingAddressScreen />} />
         <Route path="/news" element={<NewsScreen />} />
         <Route path="/machines" element={<MachinesScreen />} />
         <Route path="/machines/:machine_name" element={<SubMachineScreen />} />
