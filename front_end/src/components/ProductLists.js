@@ -65,7 +65,10 @@ export default function ProductLists({ machines }) {
             <div className="available-products">
               Available: {product.countInStocks}
             </div>
-            <div className="machine-price"> Rs {product.price} / - </div>
+            <div className="machine-price">
+              {' '}
+              Rs {product.price.toLocaleString('en-US')} / -{' '}
+            </div>
             {product.countInStocks === 0 ? (
               <button
                 type="button"

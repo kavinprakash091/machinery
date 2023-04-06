@@ -12,6 +12,12 @@ const initialState = {
   userDetails: localStorage.getItem('userDetails')
     ? JSON.parse(localStorage.getItem('userDetails'))
     : null,
+  shipping_address: localStorage.getItem('shippingAddress')
+    ? JSON.parse(localStorage.getItem('shippingAddress'))
+    : null,
+  payment_method: localStorage.getItem('paymentMethod')
+    ? JSON.parse(localStorage.getItem('paymentMethod'))
+    : null,
 };
 
 const reducer = (state, action) => {
@@ -28,6 +34,10 @@ const reducer = (state, action) => {
       return { ...state, cartItems: action.payload };
     case 'REMOVE_FROM_CART':
       return { ...state, cartItems: action.payload };
+    case 'SHIPPING_ADDRESS':
+      return { ...state, shipping_address: action.payload };
+    case 'PAYMENT_METHOD':
+      return { ...state, payment_method: action.payload };
     default:
       return state;
   }

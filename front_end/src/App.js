@@ -10,6 +10,7 @@ import SubMachineScreen from './screens/SubMachineScreen';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CartScreen from './screens/CartScreen';
+import PaymentScreen from './screens/PaymentScreen';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/sign-in" element={<SigninScreen />} />
         <Route path="/cart" element={<CartScreen />} />
         <Route path="/shipping" element={<ShippingAddressScreen />} />
+        <Route path="/payment" element={<PaymentScreen />} />
         <Route path="/news" element={<NewsScreen />} />
         <Route path="/machines" element={<MachinesScreen />} />
         <Route path="/machines/:machine_name" element={<SubMachineScreen />} />

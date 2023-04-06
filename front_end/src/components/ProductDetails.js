@@ -91,7 +91,10 @@ export default function ProductDetails({ product_detail }) {
             <span className="available-batch">In Stock</span>
           )}
         </div>{' '}
-        <div className="machine-price1"> Rs {product_detail.price} / - </div>{' '}
+        <div className="machine-price1">
+          {' '}
+          Rs {product_detail.price.toLocaleString('en-US')} / -{' '}
+        </div>{' '}
         <div className="minimum-order-quantity">
           Minimum order quantity : <span>1 Piece</span>
         </div>

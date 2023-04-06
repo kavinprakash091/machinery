@@ -185,11 +185,15 @@ export default function CartScreen() {
             </div>
             <div className="sub-total-container">
               <h1>
-                Subtotal ({cartItems.length}{' '}
+                Subtotal ({cartItems.reduce((s, a) => s + a.quantity, 0)}{' '}
                 {cartItems.length === 1 ? 'item' : 'items'}) :
               </h1>
               <h1>
-                Rs {cartItems.reduce((s, a) => s + a.quantity * a.price, 0)} /-
+                Rs{' '}
+                {cartItems
+                  .reduce((s, a) => s + a.quantity * a.price, 0)
+                  .toLocaleString('en-US')}{' '}
+                /-
               </h1>
               <Link to="/shipping" className="proceed-to-checkout-button">
                 Proceed to Checkout
