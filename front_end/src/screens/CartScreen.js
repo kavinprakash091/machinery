@@ -27,8 +27,6 @@ export default function CartScreen() {
 
   const [{ error }, dispatch] = useReducer(reducer, { error: '' });
 
-  const [totalPrice, setTotalPrice] = useState(0);
-
   useEffect(() => {
     window.scrollTo(0, 500);
   }, []);
@@ -168,7 +166,7 @@ export default function CartScreen() {
                             ></i>
                           </div>
                           <div className="cart-item-price">
-                            Rs {product_detail.price} /-
+                            Rs {product_detail.price.toLocaleString('en-US')} /-
                           </div>
                           <div className="cart-item-remove">
                             <i

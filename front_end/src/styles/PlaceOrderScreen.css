@@ -1,0 +1,234 @@
+.place-order-container {
+  width: 90%;
+  margin: 5% auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.place-order-left-section {
+  width: 65%;
+}
+
+.place-order-shipping {
+  width: 100%;
+  padding: 2%;
+  margin-bottom: 3%;
+  border-radius: 5px;
+  box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
+}
+
+.place-order-shipping h1 {
+  margin: 1% 0%;
+  font-size: 1.4rem;
+  color: #000000;
+}
+
+.place-order-shipping table {
+  width: 100%;
+  margin: 3% 0% 3% 0%;
+}
+
+.place-order-shipping table tr td:nth-child(1),
+td:nth-child(2) {
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 500;
+}
+
+.place-order-shipping1 table tr td:nth-child(1) {
+  width: 20%;
+}
+
+.place-order-shipping table tr td:nth-child(3) {
+  padding-left: 1%;
+  color: #969696;
+}
+
+.place-order-shipping1 table tr td:nth-child(2) {
+  width: 0%;
+}
+
+.delivered-box {
+  width: 95%;
+  padding: 2%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  background-color: #ff7979;
+  color: #7e1818;
+}
+
+.place-order-edit {
+  font-size: 1rem;
+  font-weight: 500;
+  color: blue;
+}
+
+.paid-box {
+  width: 95%;
+  padding: 2%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  background-color: #79ffb1;
+  color: #187e22;
+}
+
+.place-order-cart-item-card {
+  width: 96%;
+  padding: 2%;
+  border-radius: 5px;
+  margin-bottom: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
+}
+
+.place-order-cart-item-image {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 5px;
+  box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
+}
+
+.place-order-cart-item-image > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.place-order-cart-item-name {
+  width: 40%;
+  text-decoration: none;
+  color: #474747;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.place-order-cart-item-quantity {
+  width: 15%;
+  color: #474747;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.place-order-cart-item-price {
+  width: 25%;
+  color: #474747;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.place-order-right-section {
+  width: 28%;
+}
+
+.order-summary-container,
+.order-status-container {
+  width: 100%;
+  padding: 1%;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
+}
+
+.order-summary-container h1,
+.order-status-container h1 {
+  font-size: 1.4rem;
+  color: #000000;
+}
+
+.order-summary-container table {
+  width: 90%;
+  margin: 3% auto;
+  border-collapse: collapse;
+}
+
+.order-summary-container table tr {
+  border-bottom: 1px solid #000000;
+}
+
+.order-summary-container table tr td {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #474747;
+  padding: 3% 0%;
+}
+
+.order-summary-container table tr td:nth-child(2) {
+  width: 10%;
+}
+
+.order-summary-container table tr td:nth-child(3) {
+  width: 25%;
+  text-align: end;
+}
+
+.order-confirm-button {
+  width: 90%;
+  padding: 3% 0%;
+  margin: 5%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: #f8c12c;
+  cursor: pointer;
+}
+
+.order-status-progress-container {
+  width: 70%;
+  margin: 2% auto;
+}
+
+.order-status-progress {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 0.5rem;
+}
+
+.order-status-progress span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #878787;
+}
+
+.order-status-progress1 span {
+  color: #00ba3b;
+}
+
+.order-status-outer-circle {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  border: 3px solid #878787;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-status-outer-circle1 {
+  border: 3px solid #00ba3b;
+}
+
+.order-status-outer-circle1 i {
+  font-size: 1.2rem;
+  color: #00ba3b;
+}
+
+.order-status-inner-circle {
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  background-color: #878787;
+}
+
+.order-status-line {
+  height: 3rem;
+  width: 3px;
+  margin-left: 45%;
+  background-color: #878787;
+}
