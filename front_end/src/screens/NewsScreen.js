@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 export default function NewsScreen() {
   return (
     <section className="news-page">
-      <PageHeader />
+      <div className="top-margin"> </div> <PageHeader />
       <ContactHeader />
       <Navbar />
       <NewsHome content="latest news" />

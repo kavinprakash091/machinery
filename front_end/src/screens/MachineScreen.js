@@ -25,7 +25,7 @@ export default function MachineScreen() {
     });
 
   useEffect(() => {
-    window.scrollTo(0, 500);
+    window.scrollTo(0, 576);
   }, []);
 
   return (
@@ -33,6 +33,7 @@ export default function MachineScreen() {
       <Helmet>
         <title>Machines</title>
       </Helmet>
+      <div className="top-margin"></div>
       <PageHeader />
       <ContactHeader />
       <Navbar />

@@ -29,11 +29,12 @@ export default function SubMachineScreen() {
     });
 
   useEffect(() => {
-    window.scrollTo(0, 500);
+    window.scrollTo(0, 576);
   }, []);
 
   return (
     <section className="machine-page">
+      <div className="top-margin"></div>
       <PageHeader />
       <ContactHeader />
       <Navbar />

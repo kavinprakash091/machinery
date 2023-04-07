@@ -22,6 +22,7 @@ export default function HomeScreen() {
       <Helmet>
         <title> Company Name </title>
       </Helmet>
+      <div className="top-margin"></div>
       <PageHeader />
       <ContactHeader />
       <Navbar />

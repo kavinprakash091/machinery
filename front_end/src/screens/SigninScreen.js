@@ -82,6 +82,7 @@ export default function SigninScreen() {
   return (
     <div>
       {loading && <Loading />}
+      <div className="top-margin-signin"></div>
       <section className="signin-page">
         <div className="signin-container">
           <div className="signin-header-container">
