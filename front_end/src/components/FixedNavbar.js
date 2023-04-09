@@ -8,6 +8,11 @@ export default function FixedNavbar() {
   const { userDetails, cartItems } = state;
   const [search, setSearch] = useState('');
   const [activeProfile, setActiveProfile] = useState(false);
+
+  // window.onclick = () => {
+  //   setActiveProfile(false);
+  // };
+
   const submitHandler = (e) => {
     e.preventDefault();
     alert(search);

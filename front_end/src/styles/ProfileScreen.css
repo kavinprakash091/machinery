@@ -13,3 +13,13 @@
   background-color: #000000cd;
   border-radius: 5px;
 }
+
+.user-profile-header {
+  width: 96%;
+  padding: 1% 2%;
+  border-bottom: 2px solid #e3a701;
+}
+
+.user-profile-header h1 {
+  color: #f8c12c;
+}
