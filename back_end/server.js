@@ -28,7 +28,7 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
-app.use('/', seedRouter);
+app.use('/api/seed', seedRouter);
 app.use('/api/machines/', machineRouter);
 app.use('/api/users', userRouter);
 
@@ -36,3 +36,9 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`serve at http://localhost:${port}`);
 });
+
+// const __dirname = path.resolve();
+// app.use(express.static(path.join(__dirname, '../front_end/build')));
+// app.get('*', function (req, res) {
+//   res.sendFile(path.join(__dirname, '../front_end/build/index.html'));
+// });

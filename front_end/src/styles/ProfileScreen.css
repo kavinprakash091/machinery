@@ -1,6 +1,7 @@
 .profile-page {
   height: 100vh;
   width: 100%;
+  background: linear-gradient(to right, #afa384, #f8c12c);
   background: url('../assets/profile_background_image.jpg');
   background-attachment: fixed;
   background-size: cover;
@@ -10,8 +11,9 @@
   height: 80vh;
   width: 70%;
   margin: 2% auto;
-  background-color: #000000cd;
+  background-color: #000000cb;
   border-radius: 5px;
+  box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
 }
 
 .user-profile-header {
@@ -22,4 +24,156 @@
 
 .user-profile-header h1 {
   color: #f8c12c;
+}
+
+.user-profile-details {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.user-profile-sidebar {
+  height: 100%;
+  width: 25%;
+  box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  /* gap: 2rem; */
+}
+
+.user-profile-sidebar a,
+.user-profile-nav-item {
+  width: 85%;
+  padding: 8% 0% 8% 15%;
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 1rem;
+  font-weight: 400;
+  background: none;
+  border: none;
+}
+
+.user-profile-sidebar .user-profile-nav-item {
+  text-align: left;
+  cursor: pointer;
+}
+
+.user-profile-sidebar a:hover,
+.user-profile-nav-item:hover {
+  color: #f8c12c;
+  background-color: #3b3b3bbe;
+}
+
+.user-profile-sidebar a i,
+.user-profile-nav-item i {
+  margin-right: 5%;
+}
+
+.user-profile-active-nav-item {
+  color: #f8c12c;
+  background-color: #3b3b3bbe;
+}
+
+.user-profile-detail {
+  width: 75%;
+  height: 70vh;
+}
+
+.user-profile-information-container {
+  height: 80%;
+  width: 100%;
+}
+
+.user-profile-information-container h1 {
+  margin: 2%;
+  font-size: 1.2rem;
+  color: #f8c12c;
+}
+
+.user-profile-image-container {
+  width: 84%;
+  padding: 1% 8%;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+}
+
+.user-profile-image {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.user-profile-image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-profile-image-button-container {
+  width: 50%;
+}
+
+.user-profile-image-remove-button,
+.user-profile-image-edit-button {
+  margin: 0% 3%;
+  padding: 3% 8%;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: red;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.user-profile-image-edit-button {
+  background-color: blue;
+}
+
+.user-profile-account-information-container {
+  width: 100%;
+  margin: 2% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile-account-information-container h1 {
+  margin: 2%;
+  font-size: 1.2rem;
+  color: #ebebeb;
+}
+
+.user-profile-account-information,
+.user-profile-change-password {
+  width: 50%;
+  height: 20vh;
+}
+
+.user-profile-save-button-container {
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.user-profile-cancel-button,
+.user-profile-save-button {
+  padding: 1% 3%;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.user-profile-save-button {
+  background-color: #f8c12c;
 }
