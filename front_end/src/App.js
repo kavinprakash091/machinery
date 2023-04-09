@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import CartScreen from './screens/CartScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/shipping" element={<ShippingAddressScreen />} />
         <Route path="/payment" element={<PaymentScreen />} />
         <Route path="/placeorder" element={<PlaceOrderScreen />} />
+        <Route path="/users/profile" element={<ProfileScreen />} />
         <Route path="/news" element={<NewsScreen />} />
         <Route path="/machines" element={<MachinesScreen />} />
         <Route path="/machines/:machine_name" element={<SubMachineScreen />} />

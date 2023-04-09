@@ -1,11 +1,15 @@
 import Axios from 'axios';
-import React, { useContext, useReducer, useState } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Loading from '../components/Loading';
 import { Store } from '../Store';
 import '../styles/SigninScreen.css';
 import { getError } from '../Utils';
+import jwt_decode from 'jwt-decode';
+import { LoginSocialFacebook } from 'reactjs-social-login';
+import { FacebookLoginButton } from 'react-social-login-buttons';
+import MessageBox from '../components/MessageBox';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -27,24 +31,24 @@ export default function SigninScreen() {
   const [{ loading }, dispatch] = useReducer(reducer, {
     loading: false,
   });
-  const [activeButton, setActiveButton] = useState(0);
-  const [signupName, setSignupName] = useState('');
-  const [signupEmail, setSignupEmail] = useState('');
-  const [signupPhone, setSignupPhone] = useState('');
-  const [signupPassword, setSignupPassword] = useState('');
-  const [signinEmail, setSigninEmail] = useState('');
-  const [signinPassword, setSigninPassword] = useState('');
 
-  const signupHandler = async (e) => {
-    e.preventDefault();
+  const [googleUser, setGoogleUser] = useState('');
+  const [facebookUser, setFacebookUser] = useState('');
+  const [activeButton, setActiveButton] = useState(0);
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
+
+  const signUp = async () => {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      if (signupPhone.length === 10) {
+      if (phone.length === 10 || phone.length === 0) {
         const { data } = await Axios.put('/users/sign-up', {
-          username: signupName,
-          email: signupEmail,
-          password: signupPassword,
-          phone: signupPhone,
+          username,
+          email,
+          password,
+          phone,
         });
         localStorage.setItem('userDetails', JSON.stringify(data));
         ctxDispatch({ type: 'SIGN_UP', payload: data });
@@ -60,14 +64,17 @@ export default function SigninScreen() {
       toast.error(getError(err));
     }
   };
-
-  const signinHandler = async (e) => {
+  const signupHandler = (e) => {
     e.preventDefault();
+    signUp();
+  };
+
+  const signIn = async () => {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
       const { data } = await Axios.post('/users/sign-in', {
-        email: signinEmail,
-        password: signinPassword,
+        email,
+        password,
       });
       localStorage.setItem('userDetails', JSON.stringify(data));
       ctxDispatch({ type: 'SIGN_IN', payload: data });
@@ -79,6 +86,64 @@ export default function SigninScreen() {
       toast.error(getError(err));
     }
   };
+
+  const signinHandler = (e) => {
+    e.preventDefault();
+    signIn();
+  };
+
+  const handleSignUpCallbackResponse = async (response) => {
+    var userObject = await jwt_decode(response.credential);
+    setGoogleUser(userObject);
+    setUsername(userObject.name);
+    setEmail(userObject.email);
+    setPassword('google-account');
+    console.log(googleUser);
+    signUp();
+  };
+
+  useEffect(() => {
+    /*global google*/
+    google.accounts.id.initialize({
+      client_id:
+        '721534833667-llcku5r6d5nk4c4o1sifbi0nbgodq5tk.apps.googleusercontent.com',
+      callback: handleSignUpCallbackResponse,
+    });
+
+    google.accounts.id.renderButton(document.getElementById('googleSignup'), {
+      theme: 'outline',
+      size: 'large',
+    });
+
+    google.accounts.id.prompt();
+  }, []);
+
+  const handleSignInCallbackResponse = async (response) => {
+    var userObject = await jwt_decode(response.credential);
+    setGoogleUser(userObject);
+    setUsername(userObject.name);
+    setEmail(userObject.email);
+    setPassword('google-account');
+    console.log(googleUser);
+    signIn();
+  };
+
+  useEffect(() => {
+    /*global google*/
+    google.accounts.id.initialize({
+      client_id:
+        '721534833667-llcku5r6d5nk4c4o1sifbi0nbgodq5tk.apps.googleusercontent.com',
+      callback: handleSignInCallbackResponse,
+    });
+
+    google.accounts.id.renderButton(document.getElementById('googleSignin'), {
+      theme: 'outline',
+      size: 'large',
+    });
+
+    google.accounts.id.prompt();
+  }, []);
+
   return (
     <div>
       {loading && <Loading />}
@@ -120,15 +185,15 @@ export default function SigninScreen() {
               <div>
                 <input
                   type="text"
-                  onChange={(e) => setSignupName(e.target.value)}
-                  value={signupName}
+                  onChange={(e) => setUsername(e.target.value)}
+                  value={username}
                   placeholder="Username*"
                   required
                 />
                 <input
                   type="email"
-                  onChange={(e) => setSignupEmail(e.target.value)}
-                  value={signupEmail}
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                   placeholder="Email*"
                   required
                 />
@@ -136,15 +201,15 @@ export default function SigninScreen() {
               <div>
                 <input
                   type="phone"
-                  onChange={(e) => setSignupPhone(e.target.value)}
-                  value={signupPhone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  value={phone}
                   placeholder="Mobile Number*"
                   required
                 />
                 <input
                   type="password"
-                  onChange={(e) => setSignupPassword(e.target.value)}
-                  value={signupPassword}
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
                   placeholder="Password*"
                   required
                 />
@@ -163,27 +228,26 @@ export default function SigninScreen() {
               <span>or</span>
               <div className="or-line"></div>
             </div>
-            <Link
-              to="https://www.google.com"
-              className="google-button-container"
-            >
-              <div className="google-icon">
-                <img src={require('../assets/google_icon.png')} alt="google" />
+            <div className="google-button-container">
+              <button id="googleSignup" className="google-button"></button>
+              <div className="facebook-button">
+                <LoginSocialFacebook
+                  appId="578627217572624"
+                  onResolve={(response) => {
+                    setFacebookUser(response);
+                    setUsername(response.data.name);
+                    setEmail(response.data.email);
+                    setPassword('facebook-account');
+                    signUp();
+                  }}
+                  onReject={(error) => {
+                    toast.error('Something went wrong!');
+                  }}
+                >
+                  <FacebookLoginButton />
+                </LoginSocialFacebook>
               </div>
-              Continue with Google
-            </Link>
-            <Link
-              to="https://www.facebook.com"
-              className="google-button-container"
-            >
-              <div className="google-icon">
-                <img
-                  src={require('../assets/facebook_icon.png')}
-                  alt="facebook"
-                />
-              </div>
-              Continue with Facebook
-            </Link>
+            </div>
           </div>
           <div
             className={
@@ -195,15 +259,15 @@ export default function SigninScreen() {
             <form className="signin-form" onSubmit={signinHandler}>
               <input
                 type="email"
-                onChange={(e) => setSigninEmail(e.target.value)}
-                value={signinEmail}
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
                 placeholder="Email*"
                 required
               />
               <input
                 type="password"
-                onChange={(e) => setSigninPassword(e.target.value)}
-                value={signinPassword}
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
                 placeholder="Password*"
                 required
               />
@@ -220,27 +284,27 @@ export default function SigninScreen() {
               <span>or</span>
               <div className="or-line"></div>
             </div>
-            <Link
-              to="https://www.google.com"
-              className="google-button-container"
-            >
-              <div className="google-icon">
-                <img src={require('../assets/google_icon.png')} alt="google" />
+
+            <div className="google-button-container">
+              <button id="googleSignin" className="google-button"></button>
+              <div className="facebook-button">
+                <LoginSocialFacebook
+                  appId="578627217572624"
+                  onResolve={(response) => {
+                    setFacebookUser(response);
+                    setUsername(response.name);
+                    setEmail(response.email);
+                    setPassword('facebook-account');
+                    signIn();
+                  }}
+                  onReject={(error) => {
+                    toast.error('Something went wrong!');
+                  }}
+                >
+                  <FacebookLoginButton />
+                </LoginSocialFacebook>
               </div>
-              Continue with Google
-            </Link>
-            <Link
-              to="https://www.facebook.com"
-              className="google-button-container"
-            >
-              <div className="google-icon">
-                <img
-                  src={require('../assets/facebook_icon.png')}
-                  alt="facebook"
-                />
-              </div>
-              Continue with Facebook
-            </Link>
+            </div>
           </div>
         </div>
       </section>

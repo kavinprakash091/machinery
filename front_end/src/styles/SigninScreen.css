@@ -14,7 +14,7 @@
 
 .signin-container {
   width: 40%;
-  margin: 0% auto;
+  margin: -2% auto 0% auto;
   padding-bottom: 2%;
   background-color: #000000de;
 }
@@ -133,25 +133,12 @@
   width: 60%;
   margin: 2% auto;
   padding: 2% 0%;
-  background-color: #ffffff;
-  text-decoration: none;
   color: #999999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  text-align: center;
   border-radius: 2px;
 }
 
-.google-icon {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-}
-
-.google-icon > img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+.facebook-button {
+  width: 91%;
+  margin-left: 1%;
 }
