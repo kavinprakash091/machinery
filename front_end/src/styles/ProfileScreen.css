@@ -1,6 +1,7 @@
 .profile-page {
   height: 100vh;
   width: 100%;
+  background-color: #b8b8b8;
 }
 
 .user-profile-container {
@@ -132,28 +133,85 @@
   background-color: blue;
 }
 
-.user-profile-account-information-container {
+.user-profile-account-information-form {
+  width: 100%;
+}
+
+.user-profile-account-information-form-container {
   width: 100%;
   margin: 2% auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
 }
 
-.user-profile-account-information-container h1 {
+.user-profile-account-information-container h1,
+.user-profile-change-password-container h1 {
   margin: 2%;
   font-size: 1.2rem;
   color: #ebebeb;
 }
 
-.user-profile-account-information-form,
-.user-profile-change-password-form {
-  width: 50%;
+.user-profile-change-password-container {
+  width: 40%;
   height: 20vh;
+}
+
+.user-profile-change-password-container .input-fields input:focus {
+  outline: none;
+  border: 1px solid #454545;
+}
+
+.user-profile-change-password-container .input-fields {
+  position: relative;
+  margin: 5% 0%;
+}
+
+.user-profile-change-password-container .input-fields label {
+  position: absolute;
+  padding-left: 10px;
+  top: 15px;
+  cursor: text;
+}
+
+.user-profile-change-password-container .input-fields input:focus + label,
+.user-profile-change-password-container
+  .input-fields
+  input:not(:placeholder-shown)
+  + label {
+  opacity: 1;
+  transform: scale(0.9) translateY(-190%) translateX(-10%);
+  color: #f4f4f4;
+  font-weight: 500;
+}
+
+.user-profile-change-password-container .input-fields label {
+  margin-top: -1%;
+}
+
+.user-profile-change-password-container .input-fields input {
+  height: 2.5rem;
+  width: 100%;
+  margin-bottom: 2%;
+  padding-left: 3%;
+  border: 1px solid #313131;
+  color: #313131;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.user-profile-change-password-container .input-fields label,
+.user-profile-change-password-container .input-fields input {
+  transition: all 0.2s;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  opacity: 0.5;
 }
 
 .user-profile-save-button-container {
   width: 98%;
+  margin: 5% 0% 0% 0%;
   display: flex;
   align-items: center;
   justify-content: center;

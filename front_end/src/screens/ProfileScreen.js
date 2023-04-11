@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/ProfileScreen.css';
 import { Link } from 'react-router-dom';
 
-export default function () {
+export default function ProfileScreen() {
   const [activeNav, setActiveNav] = useState(1);
   const signoutHandler = () => {};
 
@@ -88,48 +88,56 @@ export default function () {
                   </button>
                 </div>
               </div>
-              <div className="user-profile-account-information-container">
-                <form className="user-profile-account-information-form">
-                  <h1>ACCOUNT INFORMATION</h1>
-                  <div className="input-fields">
-                    <input type="text" id="username" placeholder=" " required />
-                    <label htmlFor="username">Full Name*</label>
+
+              <form className="user-profile-account-information-form">
+                <div className="user-profile-account-information-form-container">
+                  <div className="user-profile-change-password-container">
+                    <h1>ACCOUNT INFORMATION</h1>
+                    <div className="input-fields">
+                      <input
+                        type="text"
+                        id="username"
+                        placeholder=" "
+                        required
+                      />
+                      <label htmlFor="username">Full Name*</label>
+                    </div>
+                    <div className="input-fields">
+                      <input type="email" id="email" placeholder=" " required />
+                      <label htmlFor="email">Email*</label>
+                    </div>
                   </div>
-                  <div className="input-fields">
-                    <input type="email" id="email" placeholder=" " required />
-                    <label htmlFor="email">Email*</label>
+                  <div className="user-profile-change-password-container">
+                    <h1>CHANGE PASSWORD</h1>
+                    <div className="input-fields">
+                      <input
+                        type="password"
+                        id="password"
+                        placeholder=" "
+                        required
+                      />
+                      <label htmlFor="password">New Password</label>
+                    </div>
+                    <div className="input-fields">
+                      <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder=" "
+                        required
+                      />
+                      <label htmlFor="confirmPassword">Confirm Password</label>
+                    </div>
                   </div>
-                </form>
-                <form>
-                  <h1>CHANGE PASSWORD</h1>
-                  <div className="input-fields">
-                    <input
-                      type="password"
-                      id="password"
-                      placeholder=" "
-                      required
-                    />
-                    <label htmlFor="password">New Password</label>
-                  </div>
-                  <div className="input-fields">
-                    <input
-                      type="password"
-                      id="confirmPassword"
-                      placeholder=" "
-                      required
-                    />
-                    <label htmlFor="confirmPassword">Confirm Password</label>
-                  </div>
-                  <div className="user-profile-save-button-container">
-                    <button type="reset" className="user-profile-cancel-button">
-                      Cancel
-                    </button>
-                    <button type="submit" className="user-profile-save-button">
-                      Save
-                    </button>
-                  </div>
-                </form>
-              </div>
+                </div>
+                <div className="user-profile-save-button-container">
+                  <button type="reset" className="user-profile-cancel-button">
+                    Cancel
+                  </button>
+                  <button type="submit" className="user-profile-save-button">
+                    Save
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

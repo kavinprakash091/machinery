@@ -50,7 +50,7 @@ export default function About() {
         </div>
         <div className="about-logo-containers">
           <div className="about-logo-container">
-            <i class="fa-solid fa-scale-balanced"></i>
+            <i className="fa-solid fa-scale-balanced"></i>
           </div>
           <div className="about-logo-detail-container">
             <h1>Legal Status of Firm</h1>
