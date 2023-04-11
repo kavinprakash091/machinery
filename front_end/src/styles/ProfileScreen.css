@@ -1,10 +1,6 @@
 .profile-page {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to right, #afa384, #f8c12c);
-  background: url('../assets/profile_background_image.jpg');
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 .user-profile-container {
@@ -27,7 +23,7 @@
 }
 
 .user-profile-details {
-  height: 80%;
+  height: 90%;
   width: 100%;
   display: flex;
   align-items: start;
@@ -150,8 +146,8 @@
   color: #ebebeb;
 }
 
-.user-profile-account-information,
-.user-profile-change-password {
+.user-profile-account-information-form,
+.user-profile-change-password-form {
   width: 50%;
   height: 20vh;
 }

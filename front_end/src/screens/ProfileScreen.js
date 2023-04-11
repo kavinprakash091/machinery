@@ -89,58 +89,49 @@ export default function () {
                 </div>
               </div>
               <div className="user-profile-account-information-container">
-                <div className="user-profile-account-information">
+                <form className="user-profile-account-information-form">
                   <h1>ACCOUNT INFORMATION</h1>
-                  <form className="shipping-address-form">
-                    <div className="input-fields">
-                      <input
-                        type="text"
-                        id="username"
-                        placeholder=" "
-                        required
-                      />
-                      <label htmlFor="username">Full Name*</label>
-                    </div>
-                    <div className="input-fields">
-                      <input type="email" id="email" placeholder=" " required />
-                      <label htmlFor="email">Email*</label>
-                    </div>
-                  </form>
-                </div>
-                <div className="user-profile-change-password">
+                  <div className="input-fields">
+                    <input type="text" id="username" placeholder=" " required />
+                    <label htmlFor="username">Full Name*</label>
+                  </div>
+                  <div className="input-fields">
+                    <input type="email" id="email" placeholder=" " required />
+                    <label htmlFor="email">Email*</label>
+                  </div>
+                </form>
+                <form>
                   <h1>CHANGE PASSWORD</h1>
-                  <form className="shipping-address-form">
-                    <div className="input-fields">
-                      <input
-                        type="password"
-                        id="password"
-                        placeholder=" "
-                        required
-                      />
-                      <label htmlFor="password">New Password</label>
-                    </div>
-                    <div className="input-fields">
-                      <input
-                        type="password"
-                        id="confirmPassword"
-                        placeholder=" "
-                        required
-                      />
-                      <label htmlFor="confirmPassword">Confirm Password</label>
-                    </div>
-                  </form>
-                </div>
+                  <div className="input-fields">
+                    <input
+                      type="password"
+                      id="password"
+                      placeholder=" "
+                      required
+                    />
+                    <label htmlFor="password">New Password</label>
+                  </div>
+                  <div className="input-fields">
+                    <input
+                      type="password"
+                      id="confirmPassword"
+                      placeholder=" "
+                      required
+                    />
+                    <label htmlFor="confirmPassword">Confirm Password</label>
+                  </div>
+                  <div className="user-profile-save-button-container">
+                    <button type="reset" className="user-profile-cancel-button">
+                      Cancel
+                    </button>
+                    <button type="submit" className="user-profile-save-button">
+                      Save
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-        </div>
-        <div className="user-profile-save-button-container">
-          <button type="reset" className="user-profile-cancel-button">
-            Cancel
-          </button>
-          <button type="button" className="user-profile-save-button">
-            Save
-          </button>
         </div>
       </div>
     </section>

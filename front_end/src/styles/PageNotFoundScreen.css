@@ -117,11 +117,6 @@
   }
 }
 
-/* @keyframes cloudFloat {
-    0% { transform: translateX(0) translateY(3px); }
-    100% { transform: translateX(1000px) translateY(0); }
-  } */
-
 @keyframes cloud001 {
   0% {
     transform: translateX(-1000px) translateY(3px);
