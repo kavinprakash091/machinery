@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 export default function MessageBox({ message, url, color, close }) {
   const [isClose, setIsClose] = useState(close);
-  console.log(isClose + ' ' + close);
 
   return (
     <div

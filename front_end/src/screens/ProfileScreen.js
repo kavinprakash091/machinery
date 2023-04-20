@@ -100,11 +100,11 @@ export default function ProfileScreen() {
                         placeholder=" "
                         required
                       />
-                      <label htmlFor="username">Full Name*</label>
+                      <label htmlFor="username">Full Name</label>
                     </div>
                     <div className="input-fields">
                       <input type="email" id="email" placeholder=" " required />
-                      <label htmlFor="email">Email*</label>
+                      <label htmlFor="email">Email</label>
                     </div>
                   </div>
                   <div className="user-profile-change-password-container">

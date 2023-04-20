@@ -6,6 +6,7 @@ import core from 'cors';
 import seedRouter from './routes/SeedRouter.js';
 import machineRouter from './routes/MachineRouter.js';
 import userRouter from './routes/UserRouter.js';
+import cartRouter from './routes/CartRouter.js';
 
 dotenv.config();
 
@@ -31,6 +32,7 @@ app.use((err, req, res, next) => {
 app.use('/api/seed', seedRouter);
 app.use('/api/machines/', machineRouter);
 app.use('/api/users', userRouter);
+app.use('/api/cart/', cartRouter);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {

@@ -1,42 +1,23 @@
 import jwt from 'jsonwebtoken';
 
 export const generateToken = (user) => {
-  if (user.isAdmin) {
-    return jwt.sign(
-      {
-        _id: user._id,
-        username: user.username,
-        email: user.email,
-        phone: user.phone,
-        address: user.address,
-        city: user.city,
-        country: user.country,
-        postal: user.postal,
-        isAdmin: user.isAdmin,
-      },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: '30d',
-      }
-    );
-  } else {
-    return jwt.sign(
-      {
-        _id: user._id,
-        username: user.username,
-        email: user.email,
-        phone: user.phone,
-        address: user.address,
-        city: user.city,
-        country: user.country,
-        postal: user.postal,
-      },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: '30d',
-      }
-    );
-  }
+  return jwt.sign(
+    {
+      _id: user._id,
+      username: user.username,
+      email: user.email,
+      phone: user.phone,
+      address: user.address,
+      city: user.city,
+      country: user.country,
+      postal: user.postal,
+      isAdmin: user.isAdmin,
+    },
+    process.env.JWT_SECRET,
+    {
+      expiresIn: '30d',
+    }
+  );
 };
 
 export const isAuth = (req, res, next) => {

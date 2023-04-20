@@ -22,6 +22,7 @@ userRouter.put(
     });
     await userSignup.save();
     res.send({
+      _id: userSignup._id,
       username: userSignup.username,
       email: userSignup.email,
       phone: userSignup.phone,
@@ -44,6 +45,7 @@ userRouter.post(
     if (bcrypt.compareSync(req.body.password, user.password)) {
       if (user.isAdmin) {
         res.send({
+          _id: user._id,
           username: user.username,
           email: user.email,
           phone: user.phone,
@@ -57,6 +59,7 @@ userRouter.post(
         return;
       } else {
         res.send({
+          _id: user._id,
           username: user.username,
           email: user.email,
           phone: user.phone,
