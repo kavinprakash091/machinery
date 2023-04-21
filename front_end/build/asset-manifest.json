@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a1ac21b0.css",
+    "main.js": "/static/js/main.7ddf5352.js",
+    "static/js/787.22edae46.chunk.js": "/static/js/787.22edae46.chunk.js",
+    "static/media/building_image.png": "/static/media/building_image.05c8340fc1aee0c59813.png",
+    "static/media/signin_background_image.png": "/static/media/signin_background_image.a4ee131770fecb3b2647.png",
+    "static/media/home_background.jpg": "/static/media/home_background.67470ee27d6b356dcbad.jpg",
+    "static/media/news_home_background.png": "/static/media/news_home_background.1fbd90575860ef68aa67.png",
+    "static/media/about_image.png": "/static/media/about_image.1cf16abd1da848041c11.png",
+    "static/media/curd_processing_unit.png": "/static/media/curd_processing_unit.633c4112db5f4ecd875e.png",
+    "static/media/mini_dairy_plant.png": "/static/media/mini_dairy_plant.d5b2be4f1ff3ce09e67f.png",
+    "static/media/contact_background.jpg": "/static/media/contact_background.634039888e8c6d541ba1.jpg",
+    "static/media/milk_pasteurization_plant.png": "/static/media/milk_pasteurization_plant.75264d371a6f9516485d.png",
+    "static/media/engineer.png": "/static/media/engineer.6041c1446d4a105ae2cd.png",
+    "static/media/news_image2.png": "/static/media/news_image2.06a61fb83dd68e1691b2.png",
+    "static/media/employee3.png": "/static/media/employee3.5aa09888c70716fd6378.png",
+    "static/media/employee2.png": "/static/media/employee2.931b2b6e8d27bedff05a.png",
+    "static/media/news_image3.png": "/static/media/news_image3.726ab1c3314680a060e1.png",
+    "static/media/news_image1.png": "/static/media/news_image1.cb69d697366ab865df34.png",
+    "static/media/header_image.png": "/static/media/header_image.0974ded2c4cbbe04bbe7.png",
+    "static/media/employee1.png": "/static/media/employee1.ee3099ffa3085c78ce69.png",
+    "static/media/machine_logo_brand.png": "/static/media/machine_logo_brand.01aa6f8dc3a6f6496790.png",
+    "static/media/tutorial_service.png": "/static/media/tutorial_service.a9e29b664295b6a147f4.png",
+    "static/media/user_avatar_logo.png": "/static/media/user_avatar_logo.6aa7c6b4416fb8a0e6e9.png",
+    "static/media/machine_logo_black.png": "/static/media/machine_logo_black.b0a2d54bedf431e690f8.png",
+    "index.html": "/index.html",
+    "main.a1ac21b0.css.map": "/static/css/main.a1ac21b0.css.map",
+    "main.7ddf5352.js.map": "/static/js/main.7ddf5352.js.map",
+    "787.22edae46.chunk.js.map": "/static/js/787.22edae46.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1ac21b0.css",
+    "static/js/main.7ddf5352.js"
+  ]
+}

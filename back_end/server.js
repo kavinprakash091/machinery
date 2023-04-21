@@ -6,7 +6,7 @@ import core from 'cors';
 import seedRouter from './routes/SeedRouter.js';
 import machineRouter from './routes/MachineRouter.js';
 import userRouter from './routes/UserRouter.js';
-import cartRouter from './routes/CartRouter.js';
+import cartRouter from './routes/cartRouter.js';
 
 dotenv.config();
 
@@ -25,22 +25,22 @@ app.use(core());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use('/api/seed', seedRouter);
+app.use('/machines/', machineRouter);
+app.use('/users', userRouter);
+app.use('/api/cart/', cartRouter);
+
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
-app.use('/api/seed', seedRouter);
-app.use('/api/machines/', machineRouter);
-app.use('/api/users', userRouter);
-app.use('/api/cart/', cartRouter);
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '../front_end/build')));
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, '../front_end/build/index.html'));
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`serve at http://localhost:${port}`);
 });
-
-// const __dirname = path.resolve();
-// app.use(express.static(path.join(__dirname, '../front_end/build')));
-// app.get('*', function (req, res) {
-//   res.sendFile(path.join(__dirname, '../front_end/build/index.html'));
-// });

@@ -42,7 +42,8 @@ export default function MachinesScreen() {
     const fetchMachines = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const { data } = await Axios.get('/machines');
+        const { data } = await Axios.get('/machines/get');
+        console.log(data);
         userDetails &&
           cartItems.map((cartItem) => {
             data
@@ -56,8 +57,10 @@ export default function MachinesScreen() {
         dispatch({ type: 'FETCH_SUCCESS' });
         localStorage.setItem('machineLists', JSON.stringify(data));
         ctxDispatch({ type: 'MACHINES_LISTS', payload: data });
+        console.log(data);
       } catch (err) {
         dispatch({ type: 'FETCH_FAILED', error: getError(err) });
+        console.log(err);
       }
     };
     fetchMachines();

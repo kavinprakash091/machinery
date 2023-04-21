@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ContactHeader from '../components/ContactHeader';
 import LatestNews from '../components/LatestNews';
 import Navbar from '../components/Navbar';
@@ -8,6 +8,9 @@ import ContactFooter from '../components/ContactFooter';
 import Footer from '../components/Footer';
 
 export default function NewsScreen() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="news-page">
       <div className="top-margin"> </div> <PageHeader />
