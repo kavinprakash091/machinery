@@ -6,7 +6,6 @@ import core from 'cors';
 import seedRouter from './routes/SeedRouter.js';
 import machineRouter from './routes/MachineRouter.js';
 import userRouter from './routes/UserRouter.js';
-import cartRouter from './routes/cartRouter.js';
 
 dotenv.config();
 
@@ -28,7 +27,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/seed', seedRouter);
 app.use('/machines/', machineRouter);
 app.use('/users', userRouter);
-app.use('/api/cart/', cartRouter);
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
