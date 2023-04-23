@@ -42,10 +42,7 @@ export default function MachinesScreen() {
     const fetchMachines = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        console.log('Call begin');
         const { data } = await Axios.get('/machines');
-        console.log('Call end');
-        console.log(data);
         userDetails &&
           cartItems.map((cartItem) => {
             data
