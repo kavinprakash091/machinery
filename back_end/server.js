@@ -38,7 +38,7 @@ app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, '../front_end/build/index.html'));
 });
 
-const port = process.env.PORT || 5000;
+const port = 5000;
 app.listen(port, () => {
   console.log(`serve at http://localhost:${port}`);
 });
