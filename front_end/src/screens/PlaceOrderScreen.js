@@ -58,6 +58,8 @@ export default function PlaceOrderScreen() {
   const deliveryPrice =
     payment_method.delivery === 'Click & collect' ? round2(0) : round2(1000);
   const totalPrice = itemsPrice + shippingPrice + taxPrice + deliveryPrice;
+
+  console.log(userDetails);
   return (
     <section>
       {userDetails ? (

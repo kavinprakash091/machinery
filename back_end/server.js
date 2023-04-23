@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/seed', seedRouter);
-app.use('/machines/', machineRouter);
+app.use('/machines', machineRouter);
 app.use('/users', userRouter);
 
 app.use((err, req, res, next) => {
