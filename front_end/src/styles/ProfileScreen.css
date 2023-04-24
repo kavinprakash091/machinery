@@ -5,9 +5,9 @@
 }
 
 .user-profile-container {
-  height: 80vh;
+  height: 83.5vh;
   width: 70%;
-  margin: 2% auto;
+  margin: 1% auto;
   background-color: #000000cb;
   border-radius: 5px;
   box-shadow: #0000000d 0px 6px 24px 0px, #00000014 0px 0px 0px 1px;
@@ -139,7 +139,7 @@
 
 .user-profile-account-information-form-container {
   width: 100%;
-  margin: 2% auto;
+  margin: 1% auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,7 +165,7 @@
 
 .user-profile-change-password-container .input-fields {
   position: relative;
-  margin: 5% 0%;
+  margin: 7% 0%;
 }
 
 .user-profile-change-password-container .input-fields label {
@@ -179,7 +179,9 @@
 .user-profile-change-password-container
   .input-fields
   input:not(:placeholder-shown)
-  + label {
+  + label,
+.address-book-container .input-fields input:focus + label,
+.address-book-container .input-fields input:not(:placeholder-shown) + label {
   opacity: 1;
   transform: scale(0.9) translateY(-190%) translateX(-10%);
   color: #f4f4f4;
@@ -209,9 +211,10 @@
   opacity: 0.5;
 }
 
-.user-profile-save-button-container {
+.user-profile-save-button-container,
+.user-address-book-save-button-container {
   width: 98%;
-  margin: 5% 0% 0% 0%;
+  margin: 7% 0% 0% 0%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,4 +233,13 @@
 
 .user-profile-save-button {
   background-color: #f8c12c;
+}
+
+.address-book-container {
+  width: 85%;
+  margin: 0% auto;
+}
+
+.user-address-book-save-button-container {
+  margin-top: -3%;
 }

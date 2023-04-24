@@ -2,7 +2,7 @@ import express from 'express';
 import User from '../models/UserModel.js';
 import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcryptjs';
-import { generateToken } from '../Utils.js';
+import { generateToken, isAuth } from '../Utils.js';
 
 const userRouter = express.Router();
 
@@ -43,38 +43,45 @@ userRouter.post(
       return;
     }
     if (bcrypt.compareSync(req.body.password, user.password)) {
-      if (user.isAdmin) {
-        res.send({
-          _id: user._id,
-          username: user.username,
-          email: user.email,
-          phone: user.phone,
-          address: user.address,
-          city: user.city,
-          country: user.country,
-          postal: user.postal,
-          isAdmin: user.isAdmin,
-          token: generateToken(user),
-        });
-        return;
-      } else {
-        res.send({
-          _id: user._id,
-          username: user.username,
-          email: user.email,
-          phone: user.phone,
-          address: user.address,
-          city: user.city,
-          country: user.country,
-          postal: user.postal,
-          token: generateToken(user),
-        });
-        return;
-      }
+      res.send({
+        _id: user._id,
+        username: user.username,
+        email: user.email,
+        phone: user.phone,
+        address: user.address,
+        city: user.city,
+        country: user.country,
+        postal: user.postal,
+        isAdmin: user.isAdmin,
+        token: generateToken(user),
+      });
+      return;
     } else {
       res.status(404).send({ message: 'Invalid password!' });
       return;
     }
+  })
+);
+
+userRouter.put(
+  '/address/:id',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findByIdAndUpdate(req.params.id, {
+      address: req.body.address,
+      city: req.body.city,
+      postal: req.body.postal,
+      country: req.body.country,
+      phone: req.body.country,
+    });
+
+    if (user) {
+      res.send(user);
+      return;
+    }
+
+    res.status(404).send({ message: 'User not found!' });
+    return;
   })
 );
 

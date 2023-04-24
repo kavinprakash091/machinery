@@ -28,6 +28,8 @@ const reducer = (state, action) => {
       return { ...state, userDetails: action.payload };
     case 'SIGN_IN':
       return { ...state, userDetails: action.payload };
+    case 'SET_ADDRESS':
+      return { ...state, userDetails: action.payload };
     case 'SIGN_OUT':
       return { ...state, userDetails: null };
     case 'ADD_TO_CART':

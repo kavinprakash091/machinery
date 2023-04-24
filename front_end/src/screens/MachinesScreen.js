@@ -11,6 +11,7 @@ import Sidebar from '../components/Sidebar';
 import { Store } from '../Store';
 import '../styles/MachineScreen.css';
 import { getError } from '../Utils';
+import { toast } from 'react-toastify';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -59,7 +60,7 @@ export default function MachinesScreen() {
         console.log(data);
       } catch (err) {
         dispatch({ type: 'FETCH_FAILED', error: getError(err) });
-        console.log(err);
+        toast.error(getError(err));
       }
     };
     fetchMachines();
